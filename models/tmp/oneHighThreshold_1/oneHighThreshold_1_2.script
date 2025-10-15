@@ -1,0 +1,13 @@
+model in "/home/mdlee/Dropbox/GitHub/citizenFrogs/models/tmp/oneHighThreshold_1/oneHighThreshold_1_jags.jags"
+data in "/home/mdlee/Dropbox/GitHub/citizenFrogs/models/tmp/oneHighThreshold_1/oneHighThreshold_1.data"
+compile, nchains(1)
+parameters in "/home/mdlee/Dropbox/GitHub/citizenFrogs/models/tmp/oneHighThreshold_1/oneHighThreshold_1_2.init"
+parameters in "/home/mdlee/Dropbox/GitHub/citizenFrogs/models/tmp/oneHighThreshold_1/oneHighThreshold_1_2.seed"
+initialize
+update 1000
+monitor set alpha, thin(1)
+monitor set beta, thin(1)
+monitor set tau, thin(1)
+monitor set phi, thin(1)
+update 1000
+coda *, stem('samples_2_')

@@ -1,0 +1,4 @@
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/lib64/; jags /home/mdlee/Dropbox/GitHub/citizenFrogs/models/tmp/oneHighThreshold_1/oneHighThreshold_1_1.script
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/lib64/; jags /home/mdlee/Dropbox/GitHub/citizenFrogs/models/tmp/oneHighThreshold_1/oneHighThreshold_1_2.script
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/lib64/; jags /home/mdlee/Dropbox/GitHub/citizenFrogs/models/tmp/oneHighThreshold_1/oneHighThreshold_1_3.script
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/lib64/; jags /home/mdlee/Dropbox/GitHub/citizenFrogs/models/tmp/oneHighThreshold_1/oneHighThreshold_1_4.script

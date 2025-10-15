@@ -17,62 +17,64 @@
 
 clear;
 
-% %% GBF Data
-% % this corresponds to Experiment 2 (the "Two Frog Analysis") 
-% % in Thorpe et al because, as they note,
-% % the expert never identifies the LLJ frog in any trial
-% dataDir = ('./');
-% dataName = 'citizenFrogsGBF';
-% 
-% % think LW from 308-313 should be 001100 not 000200
-% % see fix from 2 to 1 below (and it implicitly assumes one above is
-% % neither)
-% 
-% % this file is no longer on the OSF
-% % it seems to match the GBF information in Ingar Matrix 3, with the first column "Olli" as the expert
-% % except the new file has more judges
-% % parse this for comparison to published results
-% T = readtable('Ingar matrix_Expert.csv', 'NumHeaderLines', 1);
-% m = T{:, ExcelColNo('D'):ExcelColNo('VR')};
-% e = T{:, ExcelColNo('C')};
-% 
-% d.info = 'citizen and expert detection of GBF frog';
-% d.truth = double(e(1:3:end) == 1); % 1:3:end just indexes GBF
-% d.y = m(1:3:end, :);
-% d.y(find(d.y == 2)) = 1;
-% [d.nStimuli, d.nPeople] = size(d.y);
-% 
-% yLong = [];
-% personLong = [];
-% stimulusLong = [];
-% correctLong = [];
-% for i = 1:d.nStimuli
-%   for j = 1:d.nPeople
-%     if ~isnan(d.y(i, j))
-%       yLong = [yLong d.y(i, j)];
-%       personLong = [personLong j];
-%       stimulusLong = [stimulusLong i];
-%       correctLong = [correctLong double(d.y(i, j) == d.truth(i))];
-%     end
-%   end
-% end
-% d.yLong = yLong;
-% d.personLong = personLong;
-% d.stimulusLong = stimulusLong;
-% d.correctLong = correctLong;
-% d.nTrials = length(yLong);
-% 
-% d.personCorrect = nan(d.nPeople, 1);
-% d.personTotal = nan(d.nPeople, 1);
-% for j = 1:d.nPeople
-%   d.personCorrect(j) = sum(d.correctLong(d.personLong == j));
-%   d.personTotal(j) = sum((d.personLong == j));
-% end
-% 
-% save([dataDir dataName], 'd');
+%% GBF Data
+% this corresponds to Experiment 2 (the "Two Frog Analysis")
+% in Thorpe et al because, as they note,
+% the expert never identifies the LLJ frog in any trial
+dataDir = ('./');
+dataName = 'citizenFrogsGBF';
+
+% think LW from 308-313 should be 001100 not 000200
+% see fix from 2 to 1 below (and it implicitly assumes one above is
+% neither)
+
+% this file is no longer on the OSF
+% it seems to match the GBF information in Ingar Matrix 3, with the first column "Olli" as the expert
+% except the new file has more judges
+% parse this for comparison to published results
+T = readtable('Ingar matrix_Expert.csv', 'NumHeaderLines', 1);
+m = T{:, ExcelColNo('D'):ExcelColNo('VR')};
+e = T{:, ExcelColNo('C')};
+
+d.info = 'citizen and expert detection of GBF frog';
+d.frogs = 'GBF';
+d.nFrogs = 1;
+d.truth = double(e(1:3:end) == 1); % 1:3:end just indexes GBF
+d.y = m(1:3:end, :);
+d.y(find(d.y == 2)) = 1;
+[d.nStimuli, d.nPeople] = size(d.y);
+
+yLong = [];
+personLong = [];
+stimulusLong = [];
+correctLong = [];
+for i = 1:d.nStimuli
+   for j = 1:d.nPeople
+      if ~isnan(d.y(i, j))
+         yLong = [yLong d.y(i, j)];
+         personLong = [personLong j];
+         stimulusLong = [stimulusLong i];
+         correctLong = [correctLong double(d.y(i, j) == d.truth(i))];
+      end
+   end
+end
+d.yLong = yLong;
+d.personLong = personLong;
+d.stimulusLong = stimulusLong;
+d.correctLong = correctLong;
+d.nTrials = length(yLong);
+
+d.personCorrect = nan(d.nPeople, 1);
+d.personTotal = nan(d.nPeople, 1);
+for j = 1:d.nPeople
+   d.personCorrect(j) = sum(d.correctLong(d.personLong == j));
+   d.personTotal(j) = sum((d.personLong == j));
+end
+
+save([dataDir dataName], 'd');
 
 %% All Frog Data
-% this conceptually corresponds to the multiple frogs contexts of Experiment 1 
+% this conceptually corresponds to the multiple frogs contexts of Experiment 1
 % but with the updated community data
 dataDir = ('./');
 dataName = 'citizenFrogsAll';
@@ -100,10 +102,10 @@ d.truth = nan(d.nFrogs, d.nStimuli);
 d.y = nan(d.nFrogs, d.nStimuli, d.nPeople);
 
 for frogIdx = 1:d.nFrogs
-  d.truth(frogIdx, :) = (e(frogIdx:d.nFrogs:end) == 1);
-  for personIdx = 1:d.nPeople
-d.y(frogIdx, :, personIdx) = m(frogIdx:d.nFrogs:end, personIdx);
-  end
+   d.truth(frogIdx, :) = (e(frogIdx:d.nFrogs:end) == 1);
+   for personIdx = 1:d.nPeople
+      d.y(frogIdx, :, personIdx) = m(frogIdx:d.nFrogs:end, personIdx);
+   end
 end
 
 yLong = [];
@@ -112,17 +114,17 @@ stimulusLong = [];
 correctLong = [];
 frogLong = [];
 for i = 1:d.nStimuli
-  for j = 1:d.nPeople
-    for k = 1:d.nFrogs
-    if ~isnan(d.y(k, i, j))
-      yLong = [yLong d.y(k, i, j)];
-      personLong = [personLong j];
-      stimulusLong = [stimulusLong i];
-      frogLong = [frogLong k];
-      correctLong = [correctLong d.y(k, i, j) == d.truth(k, i)];
-    end
-  end
-  end
+   for j = 1:d.nPeople
+      for k = 1:d.nFrogs
+         if ~isnan(d.y(k, i, j))
+            yLong = [yLong d.y(k, i, j)];
+            personLong = [personLong j];
+            stimulusLong = [stimulusLong i];
+            frogLong = [frogLong k];
+            correctLong = [correctLong d.y(k, i, j) == d.truth(k, i)];
+         end
+      end
+   end
 end
 d.yLong = yLong;
 d.personLong = personLong;
@@ -134,8 +136,8 @@ d.nTrials = length(yLong);
 d.personCorrect = nan(d.nPeople, 1);
 d.personTotal = nan(d.nPeople, 1);
 for j = 1:d.nPeople
-  d.personCorrect(j) = sum(d.correctLong(d.personLong == j));
-  d.personTotal(j) = sum((d.personLong == j));
+   d.personCorrect(j) = sum(d.correctLong(d.personLong == j));
+   d.personTotal(j) = sum((d.personLong == j));
 end
 
 save([dataDir dataName], 'd');
