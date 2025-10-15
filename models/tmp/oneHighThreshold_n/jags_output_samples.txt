@@ -1,0 +1,18 @@
+Welcome to JAGS 4.3.2 on Wed Oct 15 12:40:34 2025
+JAGS is free software and comes with ABSOLUTELY NO WARRANTY
+Loading module: basemod: ok
+Loading module: bugs: ok
+Reading data file /home/mdlee/Dropbox/GitHub/citizenFrogs/models/tmp/oneHighThreshold_n/oneHighThreshold_n.data
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 44180
+   Unobserved stochastic nodes: 17745
+   Total graph size: 254539
+Reading parameter file /home/mdlee/Dropbox/GitHub/citizenFrogs/models/tmp/oneHighThreshold_n/oneHighThreshold_n_1.init
+Reading parameter file /home/mdlee/Dropbox/GitHub/citizenFrogs/models/tmp/oneHighThreshold_n/oneHighThreshold_n_1.seed
+Initializing model
+Updating 0
+Updating 100
+WARNING: Adaptation incomplete

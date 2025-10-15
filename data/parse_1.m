@@ -79,17 +79,13 @@ save([dataDir dataName], 'd');
 dataDir = ('./');
 dataName = 'citizenFrogsAll';
 
-% think LW from 308-313 should be 001100 not 000200
-% see fix from 2 to 1 below (and it implicitly assumes one above is
-% neither)
-
-% this file is no longer on the OSF
-% it seems to match the GBF information in Ingar Matrix 3, with the first column "Olli" as the expert
-% except the new file has more judges
-% parse this for comparison to published results
 T = readtable('Ingar Matrix 3 - complete community.xlsx', 'NumHeaderLines', 1);
 m = T{:, ExcelColNo('H'):ExcelColNo('XU')};
 e = T{:, ExcelColNo('G')};
+
+% one user (column 76) is responsible for all 10 non-binary decisions,
+% remove them
+m = m(:, [1:75 77:638]);
 
 d.info = 'citizen and expert detection of many frogs';
 d.frogs = T{1:11, ExcelColNo('F')};
@@ -107,6 +103,14 @@ for frogIdx = 1:d.nFrogs
       d.y(frogIdx, :, personIdx) = m(frogIdx:d.nFrogs:end, personIdx);
    end
 end
+
+% just keep frogs that were detected by the expert at least once
+howMany = sum(d.truth, 2);
+keep = find(howMany > 0);
+d.frogs = d.frogs(keep);
+d.nFrogs = numel(d.frogs);
+d.truth = d.truth(keep, :);
+d.y = d.y(keep, :, :);
 
 yLong = [];
 personLong = [];

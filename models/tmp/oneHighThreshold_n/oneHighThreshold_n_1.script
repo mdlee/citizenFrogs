@@ -9,5 +9,5 @@ monitor set alpha, thin(1)
 monitor set beta, thin(1)
 monitor set tau, thin(1)
 monitor set phi, thin(1)
-update 10
+update 100
 coda *, stem('samples_1_')
