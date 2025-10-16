@@ -3,11 +3,11 @@
 clear; close all;
 
 preLoad = true;
-printFigures = false;
+printFigures = true;
 
 dataDir = ('../data/');
 dataList = {...
-  %'citizenFrogsGBF'; ...
+  'citizenFrogsGBF'; ...
   'citizenFrogsAll'; ...
   };
 
@@ -130,7 +130,7 @@ for dataIdx = 1:numel(dataList)
         [nRows, nCols] = subplotArrange(d.nFrogs);
 
         F = figure; clf; hold on;
-        setFigure(F, [0.2 0.2 0.6 0.6], '');
+        setFigure(F, [0.2 0.2 0.6 0.5], '');
 
         for frogIdx = 1:d.nFrogs
 
@@ -145,12 +145,13 @@ for dataIdx = 1:numel(dataList)
             'xgrid'       , 'off'                       , ...
             'ygrid'       , 'off'                       , ...
             'box'        , 'off'                     , ...
+            'color'       , 'none' , ...
             'tickdir'    , 'out'                     , ...
             'layer'      , 'top'                     , ...
             'ticklength' , [0.02 0]                  , ...
             'layer'      , 'top'                     , ...
             'fontsize'   , fontSize                  );
-          moveAxis(gca, [1 1 1 1], [0 0.05 0 0]);
+          moveAxis(gca, [1 1 1 1], [0 0.02 0 0]);
           axis equal; axis square;
           if frogIdx == (nRows*nCols - nCols + 1)
             xlabel('False Alarm Rate', 'fontsize', fontSize+2);
@@ -159,6 +160,38 @@ for dataIdx = 1:numel(dataList)
 
           plot([0 1], [0 1], 'k--', 'linewidth', 1);
           Raxes(gca, 0.01, 0.01);
+          A = gca;
+
+          if d.nFrogs == 1
+            % ax = get(gca, 'position');
+            % normalizedPosition = [ax(1)+ax(3)-0.11, ax(2)+0.01, 0.14, 0.14*6/5];
+            % hAxes = axes('Position', normalizedPosition);
+            % axis off;
+            % axes(hAxes);
+            % imshow(uint8(d.images));
+            % 
+            % axes(A);
+            text(0, 1, d.frogs, ...
+              'vert', 'top', ...
+              'hor', 'left', ...
+              'fontweight', 'bold', ...
+              'fontsize', fontSize);
+          else
+            ax = get(gca, 'position');
+            normalizedPosition = [ax(1)+ax(3)-0.11, ax(2)+0.01, 0.14, 0.14*6/5];
+            hAxes = axes('Position', normalizedPosition);
+            axis off;
+            axes(hAxes);
+            imshow(uint8(d.images(:, :, :, frogIdx)));
+
+            axes(A);
+            text(0, 1, d.frogs{frogIdx}, ...
+              'vert', 'top', ...
+              'hor', 'left', ...
+              'fontweight', 'bold', ...
+              'fontsize', fontSize);
+          end
+
 
           % model
           hitList = [];
@@ -202,25 +235,16 @@ for dataIdx = 1:numel(dataList)
             'linewidth', lineWidth, ...
             'color', majorityColor);
 
-          if frogIdx == (nRows*nCols - nCols + 1)
-            legend(H, labs, ...
-              'box', 'on', ...
+          if frogIdx == d.nFrogs
+            L = legend(H, labs, ...
+              'box', 'off', ...
               'fontsize', fontSize, ...
-              'location', 'southeast');
+              'location', 'east');
+            set(L, 'pos', get(L, 'pos') + [0.1 0 0 0]);
           end
 
-          if d.nFrogs == 1
-            text(0, 1, d.frogs, ...
-              'vert', 'top', ...
-              'hor', 'left', ...
-              'fontsize', fontSize);
-          else
-            text(0, 1, d.frogs{frogIdx}, ...
-              'vert', 'top', ...
-              'hor', 'left', ...
-              'fontsize', fontSize);
-          end
 
+          %return;
         end
 
         % Quick and dirty phi, detection x accuracy, bias x accuracy
