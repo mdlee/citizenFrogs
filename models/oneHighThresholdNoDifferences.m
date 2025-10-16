@@ -1,14 +1,14 @@
 %% One high threshold model for citizen frog aggregation
+% no differences assumes each person's alpha and beta applies to all frogs
 
 clear; close all;
 
-preLoad = true;
+preLoad = false;
 printFigures = false;
 
 dataDir = ('../data/');
 dataList = {...
-  'citizenFrogsGBF'; ...
- % 'citizenFrogsAll'; ...
+  'citizenFrogsAll'; ...
   };
 
 figureList = { ...
@@ -21,8 +21,8 @@ engine = 'jags';
 params = {'alpha', 'beta', 'tau', 'phi'};
 
 nChains    = 8;     % number of MCMC chains
-nBurnin    = 1e3;   % number of discarded burn-in samples
-nSamples   = 1e3;   % number of collected samples
+nBurnin    = 0;   % number of discarded burn-in samples
+nSamples   = 1e2;   % number of collected samples
 nThin      = 1;     % number of samples between those collected
 doParallel = 1;     % whether MATLAB parallel toolbox parallizes chains
 
@@ -46,7 +46,7 @@ for dataIdx = 1:numel(dataList)
       'y'           , d.yLong);
     generator = @()struct('alpha', rand(d.nPeople, 1));
   else
-    modelName = 'oneHighThreshold_n';
+    modelName = 'oneHighThresholdNoDifferences_n';
     data = struct(...
       'nStimuli'    , d.nStimuli       , ...
       'nPeople'     , d.nPeople        , ...
@@ -56,7 +56,7 @@ for dataIdx = 1:numel(dataList)
       'stimulus'    , d.stimulusLong, ...
       'frog'        , d.frogLong, ...
       'y'           , d.yLong);
-    generator = @()struct('alpha', rand(d.nPeople, d.nFrogs));
+    generator = @()struct('alpha', rand(d.nPeople, 1[]));
   end
 
 
@@ -235,9 +235,9 @@ for dataIdx = 1:numel(dataList)
             'linewidth', lineWidth, ...
             'color', majorityColor);
 
-          [hitList' faList']
-
-          pause;
+          % [hitList' faList']
+          % 
+          % pause;
 
           if frogIdx == d.nFrogs
             L = legend(H, labs, ...

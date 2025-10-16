@@ -17,6 +17,87 @@
 
 clear;
 
+%% Four Frog Data
+dataDir = ('./');
+dataName = 'citizenFrogsThree';
+
+T = readtable('Ingar Matrix 2.xlsx', 'NumHeaderLines', 1);
+m = T{:, ExcelColNo('H'):ExcelColNo('XU')};
+e = T{:, ExcelColNo('G')};
+
+% one user (column 76) is responsible for all 10 non-binary decisions,
+% remove them
+%m = m(:, [1:75 77:638]);
+
+d.info = 'citizen and expert detection of three frogs';
+d.frogs = T{1:4, ExcelColNo('F')};
+d.nFrogs = numel(d.frogs);
+[~, d.nPeople] = size(m);
+tmp = length(m);
+d.nStimuli = tmp/d.nFrogs;
+
+d.truth = nan(d.nFrogs, d.nStimuli);
+d.y = nan(d.nFrogs, d.nStimuli, d.nPeople);
+
+for frogIdx = 1:d.nFrogs
+   d.truth(frogIdx, :) = (e(frogIdx:d.nFrogs:end) == 1);
+   for personIdx = 1:d.nPeople
+      d.y(frogIdx, :, personIdx) = m(frogIdx:d.nFrogs:end, personIdx);
+   end
+end
+
+% just keep frogs that were detected by the expert at least once
+howMany = sum(d.truth, 2);
+keep = find(howMany > 0);
+d.frogs = d.frogs(keep);
+d.nFrogs = numel(d.frogs);
+d.truth = d.truth(keep, :);
+d.y = d.y(keep, :, :);
+
+trim = 220;
+d.images = nan(1024-2*trim+1, 1024-2*trim+1, 3, d.nFrogs);
+for i = 1:d.nFrogs
+  [RGB, ~, ~] = imread(sprintf('images/%s.png', lower(d.frogs{i})));
+  d.images(:, :, :, i)  = RGB(trim:(1024-trim), trim:(1024-trim), :);
+end
+
+% long format
+yLong = [];
+personLong = [];
+stimulusLong = [];
+correctLong = [];
+frogLong = [];
+for i = 1:d.nStimuli
+   for j = 1:d.nPeople
+      for k = 1:d.nFrogs
+         if ~isnan(d.y(k, i, j))
+            yLong = [yLong d.y(k, i, j)];
+            personLong = [personLong j];
+            stimulusLong = [stimulusLong i];
+            frogLong = [frogLong k];
+            correctLong = [correctLong d.y(k, i, j) == d.truth(k, i)];
+         end
+      end
+   end
+end
+d.yLong = yLong;
+d.personLong = personLong;
+d.stimulusLong = stimulusLong;
+d.frogLong = frogLong;
+d.correctLong = correctLong;
+d.nTrials = length(yLong);
+
+d.personCorrect = nan(d.nPeople, 1);
+d.personTotal = nan(d.nPeople, 1);
+for j = 1:d.nPeople
+   d.personCorrect(j) = sum(d.correctLong(d.personLong == j));
+   d.personTotal(j) = sum((d.personLong == j));
+end
+
+save([dataDir dataName], 'd');
+
+return
+
 %% GBF Data
 % this corresponds to Experiment 2 (the "Two Frog Analysis")
 % in Thorpe et al because, as they note,
