@@ -2,8 +2,8 @@
 
 clear; close all;
 
-preLoad = false;
-printFigures = true;
+preLoad = true;
+printFigures = false;
 
 dataDir = ('../data/');
 dataList = {...
@@ -11,7 +11,7 @@ dataList = {...
   };
 
 figureList = { ...
-  %'quickDirty'; ...
+ 'quickDirty'; ...
   'ROCs'; ...
   };
 
@@ -32,6 +32,8 @@ load pantoneColors pantone;
 for dataIdx = 1:numel(dataList)
   dataName = dataList{dataIdx};
   load([dataDir dataName], 'd');
+
+  d.nTrials = 500;
 
     modelName = 'raschNoDifferences_n';
     data = struct(...
@@ -88,12 +90,21 @@ for dataIdx = 1:numel(dataList)
 
   end
 
-  alpha = get_matrix_from_coda(chains, 'alpha');
-  beta = get_matrix_from_coda(chains, 'beta');
-  tau = get_matrix_from_coda(chains, 'tau');
-  accuracy = (d.personCorrect+1)./(d.personTotal+2);
-    vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
+  % just convergent enough chains
+      [keepChains, rHat] = findKeepChains(chains.tau_1_2, 2, 1.1);
+      keepChains = [1 2];
+      fields = fieldnames(chains);
+      for i = 1:numel(fields)
+         chains.(fields{i}) = chains.(fields{i})(:, keepChains);
+      end
 
+  alpha = get_matrix_from_coda(chains, 'alpha');
+ beta = get_matrix_from_coda(chains, 'beta');
+  tau = get_matrix_from_coda(chains, 'tau');
+   phi = get_matrix_from_coda(chains, 'phi');
+ accuracy = (d.personCorrect+1)./(d.personTotal+2);
+    vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
+    
   for figureIdx = 1:numel(figureList)
 
     switch figureList{figureIdx}
@@ -152,7 +163,7 @@ for dataIdx = 1:numel(dataList)
 
             axes(A);
             text(0, 1, d.frogs{frogIdx}, ...
-              'vert', 'top', ...
+              'vert', 'mid', ...
               'hor', 'left', ...
               'fontweight', 'bold', ...
               'fontsize', fontSize);
@@ -206,25 +217,25 @@ for dataIdx = 1:numel(dataList)
         F = figure; clf; hold on;
         setFigure(F, [0.2 0.2 0.6 0.4], '');
 
-        subplot(1, 3, 1); hold on;
-        smhist(chains, 'phi');
-        plot(ones(1,2)*mean(d.truth), get(gca, 'ylim'), '-', 'color', 'k');
-        set(gca, 'xlim', [0 1]);
-        axis square;
+        % subplot(1, 3, 1); hold on;
+        % smhist(chains, 'phi');
+        % plot(ones(1,2)*mean(d.truth), get(gca, 'ylim'), '-', 'color', 'k');
+        % set(gca, 'xlim', [0 1]);
+        % axis square;
 
         subplot(1, 3, 2); hold on;
         plot(alpha, accuracy, 'k+');
-        axis([0 1 0 1]);
+        axis([-3 3 0 1]);
         axis square;
-        xlabel('detection probability');
+        xlabel('ability');
         ylabel('accuracy');
 
-        subplot(1, 3, 3); hold on;
-        plot(beta, accuracy, 'k+');
-        axis([0 1 0 1]);
-        axis square;
-        xlabel('guessing bias');
-        ylabel('accuracy');
+        % subplot(1, 3, 3); hold on;
+        % plot(beta, accuracy, 'k+');
+        % axis([0 1 0 1]);
+        % axis square;
+        % xlabel('guessing bias');
+        % ylabel('accuracy');
 
     end
 

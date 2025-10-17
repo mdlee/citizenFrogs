@@ -2,7 +2,7 @@
 
 clear; close all;
 
-preLoad = false;
+preLoad = true;
 printFigures = true;
 
 dataDir = ('../data/');
@@ -11,7 +11,7 @@ dataList = {...
   };
 
 figureList = { ...
-  %'quickDirty'; ...
+  'quickDirty'; ...
   'ROCs'; ...
   };
 
@@ -88,8 +88,16 @@ for dataIdx = 1:numel(dataList)
 
   end
 
-  alpha = get_matrix_from_coda(chains, 'alpha');
-  beta = get_matrix_from_coda(chains, 'beta');
+    % just convergent enough chains
+      [keepChains, rHat] = findKeepChains(chains.tau_1_2, 2, 1.1);
+      keepChains = [7];
+      fields = fieldnames(chains);
+      for i = 1:numel(fields)
+         chains.(fields{i}) = chains.(fields{i})(:, keepChains);
+      end
+
+  dPrime = get_matrix_from_coda(chains, 'd');
+  c = get_matrix_from_coda(chains, 'c');
   tau = get_matrix_from_coda(chains, 'tau');
   accuracy = (d.personCorrect+1)./(d.personTotal+2);
     vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
@@ -206,25 +214,25 @@ for dataIdx = 1:numel(dataList)
         F = figure; clf; hold on;
         setFigure(F, [0.2 0.2 0.6 0.4], '');
 
-        subplot(1, 3, 1); hold on;
-        smhist(chains, 'phi');
-        plot(ones(1,2)*mean(d.truth), get(gca, 'ylim'), '-', 'color', 'k');
-        set(gca, 'xlim', [0 1]);
-        axis square;
+        % subplot(1, 3, 1); hold on;
+        % smhist(chains, 'phi');
+        % plot(ones(1,2)*mean(d.truth), get(gca, 'ylim'), '-', 'color', 'k');
+        % set(gca, 'xlim', [0 1]);
+        % axis square;
 
         subplot(1, 3, 2); hold on;
-        plot(alpha, accuracy, 'k+');
-        axis([0 1 0 1]);
+        plot(c, accuracy, 'k+');
+        axis([-3 3 0 1]);
         axis square;
-        xlabel('detection probability');
+        xlabel('bias');
         ylabel('accuracy');
 
-        subplot(1, 3, 3); hold on;
-        plot(beta, accuracy, 'k+');
-        axis([0 1 0 1]);
-        axis square;
-        xlabel('guessing bias');
-        ylabel('accuracy');
+        % subplot(1, 3, 3); hold on;
+        % plot(beta, accuracy, 'k+');
+        % axis([0 1 0 1]);
+        % axis square;
+        % xlabel('guessing bias');
+        % ylabel('accuracy');
 
     end
 

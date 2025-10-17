@@ -7,7 +7,7 @@ model{
     y[t] ~ dbern(theta[t, tau[stimulus[t], frog[t]]+1])
   }
   for (j in 1:nFrogs){
-    phi[j] ~ dunif(0, 0.5) # model identifiability
+    phi[j] ~ dunif(0, 1)
     for (i in 1:nStimuli){
       tau[i, j] ~ dbern(phi[j])
     }
