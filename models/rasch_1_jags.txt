@@ -1,0 +1,19 @@
+# citizen frogs
+# rasch model, single frog
+model{
+  for (t in 1:nTrials){
+    theta[t, 1] = 1/(1 + exp(-(alpha[person[t]] - beta[stimulus[t]])))
+    theta[t, 2] = 1 - 1/(1 + exp(-(alpha[person[t]] - beta[stimulus[t]])))
+    y[t] ~ dbern(theta[t, tau[stimulus[t]]+1])
+  }
+  for (i in 1:nStimuli){
+    tau[i] ~ dbern(phi)
+  }
+  phi ~ dunif(0, 1)
+  for (j in 1:nPeople){
+    alpha[j] ~ dnorm(0, 1)
+  }
+  for (j in 1:nStimuli){
+    beta[j] ~ dnorm(0, 1)
+  }
+}

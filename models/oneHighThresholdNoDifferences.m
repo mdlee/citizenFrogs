@@ -4,7 +4,7 @@
 clear; close all;
 
 preLoad = false;
-printFigures = false;
+printFigures = true;
 
 dataDir = ('../data/');
 dataList = {...
@@ -21,8 +21,8 @@ engine = 'jags';
 params = {'alpha', 'beta', 'tau', 'phi'};
 
 nChains    = 8;     % number of MCMC chains
-nBurnin    = 0;   % number of discarded burn-in samples
-nSamples   = 1e2;   % number of collected samples
+nBurnin    = 1e3;   % number of discarded burn-in samples
+nSamples   = 1e3;   % number of collected samples
 nThin      = 1;     % number of samples between those collected
 doParallel = 1;     % whether MATLAB parallel toolbox parallizes chains
 
@@ -56,7 +56,7 @@ for dataIdx = 1:numel(dataList)
       'stimulus'    , d.stimulusLong, ...
       'frog'        , d.frogLong, ...
       'y'           , d.yLong);
-    generator = @()struct('alpha', rand(d.nPeople, 1[]));
+    generator = @()struct('alpha', rand(d.nPeople, 1));
   end
 
 

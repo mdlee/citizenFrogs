@@ -1,0 +1,19 @@
+# citizen frogs
+# two high threshold, many frogs
+model{
+  for (t in 1:nTrials){
+    yHat[t, 1] = 1 - phi(d[frog[t]]/2 + c[person[t]] )
+    yHat[t, 2] = 1 - phi(-d[frog[t]]/2 + c[person[t]])
+    y[t] ~ dbern(yHat[t, tau[stimulus[t], frog[t]]+1])
+  }
+  for (j in 1:nFrogs){
+    d[j] ~ dnorm(0, 1/3^2)
+    phi[j] ~ dunif(0, 0.5)
+    for (i in 1:nStimuli){
+      tau[i, j] ~ dbern(phi[j])
+    }
+  }
+  for (i in 1:nPeople){
+    c[i] ~ dnorm(0, 1/3^2)
+  }
+}

@@ -1,0 +1,21 @@
+# citizen frogs
+# rasch, many frogs
+model{
+  for (t in 1:nTrials){
+    theta[t, 1] = 1 - 1/(1 + exp(-(alpha[person[t]] - beta[frog[t]])))
+    theta[t, 2] = 1/(1 + exp(-(alpha[person[t]] - beta[frog[t]])))
+    y[t] ~ dbern(theta[t, tau[stimulus[t], frog[t]]+1])
+  }
+  for (j in 1:nFrogs){
+    phi[j] ~ dunif(0, 0.5) # model identifiability
+    for (i in 1:nStimuli){
+      tau[i, j] ~ dbern(phi[j])
+    }
+  }
+  for (j in 1:nPeople){
+    alpha[j] ~ dnorm(0, 1)
+  }
+  for (j in 1:nFrogs){
+    beta[j] ~ dnorm(0, 1)
+  }
+}
