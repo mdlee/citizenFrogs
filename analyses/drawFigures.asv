@@ -1,0 +1,118 @@
+% figures and non-modeling analyses for citizen frogs
+
+clear;
+close all;
+
+printFigures = false;
+
+analysisList = {...
+   %  'voteProportion'; ...
+   %  'voteMajority'; ...
+   %'voteROCs'; ...
+   'frogPond'; ...
+   };
+
+% load data
+dataDir = '../data/';
+dataName = 'citizenFrogsAll';
+load([dataDir dataName], 'd');
+
+% constants
+load pantoneColors pantone;
+generalDir = '../general/';
+
+% loops over analyses
+addpath(generalDir);
+for analysisIdx = 1:numel(analysisList)
+   analysisName = analysisList{analysisIdx};
+
+   switch analysisName
+      case 'voteProportion'
+         vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
+         drawEnvironmentDynamics(d, vote', pantone);
+
+      case 'voteMajority'
+         vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
+         drawEnvironmentDynamics(d, double(vote' >= 0.5), pantone);
+
+      case 'voteROCs'
+         vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
+         drawROCs(d, [], [], vote, pantone);
+
+      case 'frogPond'
+
+         fontSize = 14;
+
+% pond pictures
+           [metKikker, ~, ~] = imread('../data/images/metKikker.png');
+           [zonderKikker, ~, ~] = imread('../data/images/zonderKikker.png');
+           [citizenScientist, ~, ~] = imread('../data/images/citizenScientist.png');
+           [notebook, ~, ~] = imread('../data/images/notebook.png');
+       %    [oneHighTree, ~, ~] = imread('../data/images/oneHighTree.png');
+
+           % crop
+           keep = 200:900;
+           citizenScientist = citizenScientist(:, 200:900, :);
+
+           F = figure; clf; hold on;
+setFigure(F, [0.2 0.2 0.6 0.5], '');
+
+   set(gca, ...
+      'xlim'       , [0 1]                , ...
+      'ylim'       , [0 1]                 , ...
+      'fontsize'   , fontSize                  );
+   axis off;
+   A = gca;
+
+      hAxes = axes('units', 'norm', 'position', [0 0 0.5 1]);
+   axis off;
+   axes(hAxes);
+   imshow(uint8(zonderKikker));
+
+ hAxes = axes('units', 'norm', 'position', [0.375 0.1 0.65 0.65]);
+   axis off;
+   axes(hAxes);
+   imshow(uint8(citizenScientist));
+
+       hAxes = axes('units', 'norm', 'position', [0.55 0.5 0.2 0.2]);
+   axis off;
+   axes(hAxes); hold on;
+       axis([0 1 0 1]);
+   T(1) = text(0, 0.5, 'present  ');
+   H(1) = plot(0, 0.5, 'o');
+L(1) = plot([0 0.3], [0.5 0.75], 'k-');
+   set(T, 'fontsize', fontSize, 'fontweight', 'normal', ...
+      'vert', 'mid', 'hor', 'right');
+   set(H, 'markerfacecolor', 'k', 'markeredgecolor', 'k', ...
+      'markersize', 6)
+
+
+    hAxes = axes('units', 'norm', 'position', [0.75 0.2 0.3 0.3]);
+   axis off;
+   axes(hAxes);
+   imshow(uint8(notebook));
+
+   axes(A);
+   T(1) = text(0.15, 1.05, 'environment');
+   T(2) = text(0.7, 1.05, 'scientist');
+   T(3) = text(1, 1.05, 'data');
+
+
+   set(T, 'fontsize', fontSize+2, 'fontweight', 'bold', ...
+      'vert', 'mid', 'hor', 'cen');
+return
+
+   end
+
+
+   % print
+   if printFigures
+      if ~isfolder('figures')
+         !mkdir figures
+      end
+      print(sprintf('figures/%s.png', analysisName), '-dpng');
+      print(sprintf('figures/%s.eps', analysisName), '-depsc');
+   end
+
+end
+rmpath(generalDir);

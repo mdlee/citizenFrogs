@@ -67,6 +67,7 @@ personLong = [];
 stimulusLong = [];
 correctLong = [];
 frogLong = [];
+truthLong = [];
 for i = 1:d.nStimuli
    for j = 1:d.nPeople
       for k = 1:d.nFrogs
@@ -76,6 +77,7 @@ for i = 1:d.nStimuli
             stimulusLong = [stimulusLong i];
             frogLong = [frogLong k];
             correctLong = [correctLong d.y(k, i, j) == d.truth(k, i)];
+            truthLong = [truthLong d.truth(k, i)];
          end
       end
    end
@@ -85,6 +87,7 @@ d.personLong = personLong;
 d.stimulusLong = stimulusLong;
 d.frogLong = frogLong;
 d.correctLong = correctLong;
+d.truthLong = truthLong;
 d.nTrials = length(yLong);
 
 d.personCorrect = nan(d.nPeople, 1);
@@ -96,7 +99,7 @@ end
 
 save([dataDir dataName], 'd');
 
-return
+
 
 %% GBF Data
 % this corresponds to Experiment 2 (the "Two Frog Analysis")
@@ -209,6 +212,7 @@ personLong = [];
 stimulusLong = [];
 correctLong = [];
 frogLong = [];
+truthLong = [];
 for i = 1:d.nStimuli
    for j = 1:d.nPeople
       for k = 1:d.nFrogs
@@ -218,6 +222,7 @@ for i = 1:d.nStimuli
             stimulusLong = [stimulusLong i];
             frogLong = [frogLong k];
             correctLong = [correctLong d.y(k, i, j) == d.truth(k, i)];
+            truthLong = [truthLong d.truth(k, i)];
          end
       end
    end
@@ -227,6 +232,7 @@ d.personLong = personLong;
 d.stimulusLong = stimulusLong;
 d.frogLong = frogLong;
 d.correctLong = correctLong;
+d.truthLong = truthLong;
 d.nTrials = length(yLong);
 
 d.personCorrect = nan(d.nPeople, 1);

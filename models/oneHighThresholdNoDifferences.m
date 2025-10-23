@@ -34,7 +34,7 @@ load pantoneColors pantone;
 for dataIdx = 1:numel(dataList)
   dataName = dataList{dataIdx};
   load([dataDir dataName], 'd');
-
+return
   if d.nFrogs == 1
     modelName = 'oneHighThreshold_1';
     data = struct(...

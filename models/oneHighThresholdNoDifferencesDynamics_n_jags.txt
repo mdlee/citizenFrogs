@@ -1,0 +1,21 @@
+# citizen frogs
+# one high threshold, many frogs
+# dynamic environment
+model{
+  for (t in 1:nTrials){
+    yHat[t, 1] = beta[person[t]]
+    yHat[t, 2] = alpha[person[t]] + (1-alpha[person[t]])*beta[person[t]]
+    y[t] ~ dbern(yHat[t, tau[stimulus[t], frog[t]]+1])
+  }
+  for (j in 1:nFrogs){
+    gamma[j] ~ dunif(0.5, 1)
+    tau[1, j] ~ dbern(0.5)
+    for (i in 2:nStimuli){
+      tau[i, j] ~ dbern(equals(tau[i-1, j], 1)*gamma[j] + equals(tau[i-1, j], 0)*(1-gamma[j]))
+    }
+  }
+  for (i in 1:nPeople){
+    alpha[i] ~ dunif(0, 1)
+    beta[i] ~ dunif(0, 1)
+  }
+}

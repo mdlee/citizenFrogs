@@ -1,0 +1,115 @@
+data {
+  int<lower=1> nTrials;       // Total number of trials
+  int<lower=1> nPeople;       // Number of unique people (subjects)
+  int<lower=1> nStimuli;      // Number of unique stimuli (time points for state changes)
+  int<lower=1> nFrogs;        // Number of frogs (independent environments)
+
+  // Data inputs for the likelihood
+  array[nTrials] int<lower=0, upper=1> y;         // Observed response (0 or 1)
+  array[nTrials] int<lower=1, upper=nPeople> person; // Index of the person for each trial
+  array[nTrials] int<lower=1, upper=nStimuli> stimulus; // Index of the stimulus (time) for each trial
+  array[nTrials] int<lower=1, upper=nFrogs> frog;      // Index of the frog (environment) for each trial
+}
+
+parameters {
+  // Individual response parameters
+  array[nPeople] real<lower=0, upper=1> alpha; // False alarm rate (1-specificity)
+  array[nPeople] real<lower=0, upper=1> beta;  // Hit rate (sensitivity)
+
+  // Environmental dynamic parameter
+  array[nFrogs] real<lower=0, upper=1> gamma; // State persistence/stickiness parameter
+}
+
+transformed parameters {
+  // Observation probabilities (Emission matrix) for each person
+  // yHat_prob[p, 1] = P(y=1 | tau=0)
+  // yHat_prob[p, 2] = P(y=1 | tau=1)
+  array[nPeople, 2] real yHat_prob;
+  for (i in 1:nPeople) {
+    yHat_prob[i, 1] = beta[i];                                // P(y=1 | tau=0) = P(Hit)
+    yHat_prob[i, 2] = alpha[i] + (1.0 - alpha[i]) * beta[i];  // P(y=1 | tau=1) = P(FA) + P(Miss)*P(Hit)
+  }
+}
+
+model {
+  // ----------------------------------------------------
+  // 1. Priors for Parameters
+  // ----------------------------------------------------
+  alpha ~ beta(1, 1);
+  beta ~ beta(1, 1);
+  gamma ~ beta(1, 1);
+
+  // ----------------------------------------------------
+  // 2. State Transition Probabilities (Transition Matrix T)
+  // ----------------------------------------------------
+  array[nFrogs, 2, 2] real T_log; // Log-transition matrix
+
+  for (j in 1:nFrogs) {
+    // Current state (j-1) | Previous state (i-1)
+    T_log[j, 1, 1] = log(gamma[j]); 
+    T_log[j, 1, 2] = log(1.0 - gamma[j]); 
+    T_log[j, 2, 1] = log(1.0 - gamma[j]); 
+    T_log[j, 2, 2] = log(gamma[j]); 
+  }
+
+  // ----------------------------------------------------
+  // 3. Marginal Likelihood (Forward Algorithm)
+  // ----------------------------------------------------
+  for (f in 1:nFrogs) {
+    // Current accumulated log probability for each state (tau=0, tau=1)
+    vector[2] alpha_log = rep_vector(log(0.5), 2); // Initial state prior P(tau[1]) = 0.5 (log 0.5)
+
+    for (s in 1:nStimuli) {
+      // Find the *first* trial index (t) that matches the current stimulus (s) and frog (f).
+      // This assumes at least one trial exists for every (stimulus, frog) combination.
+      int t_current = -1; 
+      
+      for (t in 1:nTrials) {
+          if (stimulus[t] == s && frog[t] == f) {
+              t_current = t;
+              break; // Found the trial, exit the inner loop
+          }
+      }
+      
+      // If no trial was found (which shouldn't happen with correctly structured data)
+      if (t_current == -1) {
+          // Skip or apply a penalty. Given the data structure, we assume it's always found.
+      } else {
+          int p_idx = person[t_current];
+          real log_obs_prob_0;
+          real log_obs_prob_1;
+
+          // Emission probability: log P(y[t] | tau[t]=0)
+          log_obs_prob_0 = bernoulli_lpmf(y[t_current] | yHat_prob[p_idx, 1]);
+          // Emission probability: log P(y[t] | tau[t]=1)
+          log_obs_prob_1 = bernoulli_lpmf(y[t_current] | yHat_prob[p_idx, 2]);
+
+          if (s == 1) {
+            // Initial step: Prior * Emission
+            alpha_log[1] += log_obs_prob_0;
+            alpha_log[2] += log_obs_prob_1;
+          } else {
+            // Forward step: Transition + Emission
+            vector[2] alpha_log_next;
+            
+            // To state 0 (index 1)
+            alpha_log_next[1] = log_obs_prob_0 + log_sum_exp(
+              alpha_log[1] + T_log[f, 1, 1], // Path 0 -> 0
+              alpha_log[2] + T_log[f, 2, 1]  // Path 1 -> 0
+            );
+
+            // To state 1 (index 2)
+            alpha_log_next[2] = log_obs_prob_1 + log_sum_exp(
+              alpha_log[1] + T_log[f, 1, 2], // Path 0 -> 1
+              alpha_log[2] + T_log[f, 2, 2]  // Path 1 -> 1
+            );
+            
+            alpha_log = alpha_log_next;
+          }
+      }
+    }
+    
+    // Sum over the final two states to get the total marginal likelihood for frog 'f'.
+    target += log_sum_exp(alpha_log[1], alpha_log[2]);
+  }
+}
