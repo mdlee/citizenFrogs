@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex citizenFrogs_1"] 1763517786.18909 "citizenFrogs_1.aux" "citizenFrogs_1.bbl" "citizenFrogs_1" 1763519490.71319 0
+["bibtex citizenFrogs_1"] 1763517786.18909 "citizenFrogs_1.aux" "citizenFrogs_1.bbl" "citizenFrogs_1" 1763668308.98109 0
   "./citizenFrogs.bib" 1761677072.24179 675 180e8c52626a1eefedf235293d1636bf ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/apacite/apacite.bst" 1374530685 141073 9d7b79dbf9d91133318126032cff8c27 ""
-  "citizenFrogs_1.aux" 1763519489.86086 3590 45dfc888cdfb9a1df2229d1d839adaf9 "pdflatex"
+  "citizenFrogs_1.aux" 1763668308.30977 3590 45dfc888cdfb9a1df2229d1d839adaf9 "pdflatex"
   (generated)
   "citizenFrogs_1.bbl"
   "citizenFrogs_1.blg"
   (rewritten before read)
-["pdflatex"] 1763519488.30315 "citizenFrogs_1.tex" "citizenFrogs_1.pdf" "citizenFrogs_1" 1763519490.7134 0
+["pdflatex"] 1763668306.90276 "citizenFrogs_1.tex" "citizenFrogs_1.pdf" "citizenFrogs_1" 1763668308.9812 0
   "../analyses/figures/brownModel.png" 1761259588 96075 c094a8ffdb421da3faa19465eb219eb7 ""
   "../analyses/figures/brownResults.png" 1761265679 137373 3627ce899f7a66e925c9f66f5f44a926 ""
   "../analyses/figures/frogPond.eps" 1761259880.07024 3620459 1cb9cda19ef7ccd5e68b5522cbb61279 ""
@@ -328,12 +328,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1741485052.44489 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1741485137 8214195 bf786f944ace34bf08552b7f477d8310 ""
-  "citizenFrogs_1.aux" 1763519489.86086 3590 45dfc888cdfb9a1df2229d1d839adaf9 "pdflatex"
+  "citizenFrogs_1.aux" 1763668308.30977 3590 45dfc888cdfb9a1df2229d1d839adaf9 "pdflatex"
   "citizenFrogs_1.bbl" 1763517786.31196 1450 3a74375317fa92a4c1d8cd37c9c934de "bibtex citizenFrogs_1"
-  "citizenFrogs_1.nav" 1763519489.86086 1912 0de46c561c0cf9088b5f94a9274bf050 "pdflatex"
-  "citizenFrogs_1.out" 1763519489.86086 93 aea4b6a8ae45636c75679c2f0dfa4493 "pdflatex"
-  "citizenFrogs_1.tex" 1763519487.74886 7376 78a819ea34831d4c570c44e39ce81939 ""
-  "citizenFrogs_1.vrb" 1763519489.77486 216 7a7b089af28c54c8c15b52d06a3f524e "pdflatex"
+  "citizenFrogs_1.nav" 1763668308.31077 1912 0de46c561c0cf9088b5f94a9274bf050 "pdflatex"
+  "citizenFrogs_1.out" 1763668308.30977 93 aea4b6a8ae45636c75679c2f0dfa4493 "pdflatex"
+  "citizenFrogs_1.tex" 1763668306.48896 7369 f6e9b3b3d77b02a763fa7cc5fa914417 ""
+  "citizenFrogs_1.vrb" 1763668308.21599 216 7a7b089af28c54c8c15b52d06a3f524e "pdflatex"
   "mdlheader2.tex" 1761259330 8908 4a9ae6718ea817c541a651ebdbb902ca ""
   (generated)
   "/usr/share/texlive/texmf-dist/tex/latex/tools/.tex"

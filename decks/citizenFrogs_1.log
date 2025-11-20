@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.8)  18 NOV 2025 18:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.8)  20 NOV 2025 11:51
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1310,7 +1310,7 @@ ed-to.pdf>
 d_0-eps-converted-to.pdf ../analyses/figures/frogPond_0.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/frogPond_0-eps-converted-to.pdf, id=29, 859.21pt x 452.691
+<../analyses/figures/frogPond_0-eps-converted-to.pdf, id=30, 859.21pt x 452.691
 25pt>
 File: ../analyses/figures/frogPond_0-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -1335,7 +1335,7 @@ rted-to.pdf>
 dMale-eps-converted-to.pdf ../analyses/figures/frogPondMale.eps>
 (epstopdf)             \includegraphics on input line 8.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/frogPondMale-eps-converted-to.pdf, id=46, 858.20625pt x 45
+<../analyses/figures/frogPondMale-eps-converted-to.pdf, id=47, 858.20625pt x 45
 2.69125pt>
 File: ../analyses/figures/frogPondMale-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -1362,7 +1362,7 @@ dZonderKikker-eps-converted-to.pdf ../analyses/figures/frogPondZonderKikker.eps
 >
 (epstopdf)             \includegraphics on input line 8.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/frogPondZonderKikker-eps-converted-to.pdf, id=61, 858.2062
+<../analyses/figures/frogPondZonderKikker-eps-converted-to.pdf, id=62, 858.2062
 5pt x 452.69125pt>
 File: ../analyses/figures/frogPondZonderKikker-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1387,7 +1387,7 @@ rted-to.pdf>
 yClip-eps-converted-to.pdf ../analyses/figures/peopleByClip.eps>
 (epstopdf)             \includegraphics on input line 12.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/peopleByClip-eps-converted-to.pdf, id=76, 875.27pt x 473.7
+<../analyses/figures/peopleByClip-eps-converted-to.pdf, id=77, 875.27pt x 473.7
 7pt>
 File: ../analyses/figures/peopleByClip-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -1416,7 +1416,7 @@ d-to.pdf>
 wd-eps-converted-to.pdf ../analyses/figures/voteCrowd.eps>
 (epstopdf)             \includegraphics on input line 9.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/voteCrowd-eps-converted-to.pdf, id=89, 874.26625pt x 338.2
+<../analyses/figures/voteCrowd-eps-converted-to.pdf, id=90, 874.26625pt x 338.2
 6375pt>
 File: ../analyses/figures/voteCrowd-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1441,7 +1441,7 @@ Package epstopdf Info: Source file: <../analyses/figures/voteROCs.eps>
 s-eps-converted-to.pdf ../analyses/figures/voteROCs.eps>
 (epstopdf)             \includegraphics on input line 11.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/voteROCs-eps-converted-to.pdf, id=102, 740.7675pt x 423.58
+<../analyses/figures/voteROCs-eps-converted-to.pdf, id=103, 740.7675pt x 423.58
 25pt>
 File: ../analyses/figures/voteROCs-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1470,7 +1470,7 @@ Package epstopdf Info: Source file: <../analyses/figures/frogPond.eps>
 d-eps-converted-to.pdf ../analyses/figures/frogPond.eps>
 (epstopdf)             \includegraphics on input line 11.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/frogPond-eps-converted-to.pdf, id=130, 859.21pt x 452.6912
+<../analyses/figures/frogPond-eps-converted-to.pdf, id=131, 859.21pt x 452.6912
 5pt>
 File: ../analyses/figures/frogPond-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1507,7 +1507,7 @@ ighThresholdNoDifferences_n_citizenFrogsAll_ROCs-eps-converted-to.pdf ../models
 (epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
 <../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_ROCs-ep
-s-converted-to.pdf, id=161, 740.7675pt x 423.5825pt>
+s-converted-to.pdf, id=162, 740.7675pt x 423.5825pt>
 File: ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_RO
 Cs-eps-converted-to.pdf Graphic file (type pdf)
 <use ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_ROC
@@ -1541,7 +1541,7 @@ eps>
 (epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
 <../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_paramet
-ers-eps-converted-to.pdf, id=184, 874.26625pt x 473.77pt>
+ers-eps-converted-to.pdf, id=185, 874.26625pt x 473.77pt>
 File: ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_pa
 rameters-eps-converted-to.pdf Graphic file (type pdf)
 <use ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_par
@@ -1575,7 +1575,7 @@ vironmentDynamics.eps>
 (epstopdf)             \includegraphics on input line 11.
 Package epstopdf Info: Output file is already uptodate.
 <../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_environ
-mentDynamics-eps-converted-to.pdf, id=199, 874.26625pt x 338.26375pt>
+mentDynamics-eps-converted-to.pdf, id=200, 874.26625pt x 338.26375pt>
 File: ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_en
 vironmentDynamics-eps-converted-to.pdf Graphic file (type pdf)
 <use ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_env
@@ -1606,7 +1606,7 @@ tizenFrogsAll_environmentDynamics.eps>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
 <../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrogsAll
-_environmentDynamics-eps-converted-to.pdf, id=213, 874.26625pt x 338.26375pt>
+_environmentDynamics-eps-converted-to.pdf, id=214, 874.26625pt x 338.26375pt>
 File: ../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFro
 gsAll_environmentDynamics-eps-converted-to.pdf Graphic file (type pdf)
 <use ../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrog
@@ -1641,7 +1641,7 @@ OCs.eps>
 (epstopdf)             \includegraphics on input line 4.
 Package epstopdf Info: Output file is already uptodate.
 <../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrogsAll
-_ROCs-eps-converted-to.pdf, id=229, 740.7675pt x 423.5825pt>
+_ROCs-eps-converted-to.pdf, id=230, 740.7675pt x 423.5825pt>
 File: ../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFro
 gsAll_ROCs-eps-converted-to.pdf Graphic file (type pdf)
 <use ../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrog
@@ -1658,7 +1658,7 @@ l_ROCs-eps-converted-to.pdf>] (./citizenFrogs_1.bbl) [15
 \openout4 = `citizenFrogs_1.vrb'.
 
 (./citizenFrogs_1.vrb
-<../analyses/figures/brownModel.png, id=259, 714.67pt x 473.77pt>
+<../analyses/figures/brownModel.png, id=260, 714.67pt x 473.77pt>
 File: ../analyses/figures/brownModel.png Graphic file (type png)
 <use ../analyses/figures/brownModel.png>
 Package pdftex.def Info: ../analyses/figures/brownModel.png  used on input line
@@ -1674,7 +1674,7 @@ Overfull \vbox (19.65361pt too high) detected at line 201
 \openout4 = `citizenFrogs_1.vrb'.
 
 (./citizenFrogs_1.vrb
-<../analyses/figures/brownResults.png, id=271, 975.645pt x 567.11874pt>
+<../analyses/figures/brownResults.png, id=272, 975.645pt x 567.11874pt>
 File: ../analyses/figures/brownResults.png Graphic file (type png)
 <use ../analyses/figures/brownResults.png>
 Package pdftex.def Info: ../analyses/figures/brownResults.png  used on input li
@@ -1720,10 +1720,10 @@ sfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
 pfb>
-Output written on citizenFrogs_1.pdf (17 pages, 4038613 bytes).
+Output written on citizenFrogs_1.pdf (17 pages, 4038782 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 200 compressed objects within 2 object streams
+ 347 PDF objects out of 1000 (max. 8388607)
+ 201 compressed objects within 3 object streams
  38 named destinations out of 1000 (max. 500000)
  205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
