@@ -1,0 +1,59 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Brown%
+, Sumnall%
+\BCBL {}\ \BBA {} Smith%
+}{%
+Brown%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2024}}%
+}]{%
+brown2024cognitive}
+\APACinsertmetastar {%
+brown2024cognitive}%
+\begin{APACrefauthors}%
+Brown, S\BPBI D.%
+, Sumnall, J.%
+\BCBL {}\ \BBA {} Smith, P\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Using a cognitive model to understand crowdsourced data
+  from citizen scientists} {Using a cognitive model to understand crowdsourced
+  data from citizen scientists}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Behavior Research Methods}{56}{1}{421--434}.
+\newblock
+\begin{APACrefDOI} \doi{10.3758/s13428-023-02289-w} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lee%
+}{%
+Lee%
+}{%
+{\protect \APACyear {2024}}%
+}]{%
+lee2024using}
+\APACinsertmetastar {%
+lee2024using}%
+\begin{APACrefauthors}%
+Lee, M\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Using Cognitive Models to Improve the Wisdom of the
+  Crowd} {Using cognitive models to improve the wisdom of the crowd}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Current Directions in Psychological
+  Science}{33}{5}{444--451}.
+\newblock
+\begin{APACrefDOI} \doi{10.1177/09637214241264292} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

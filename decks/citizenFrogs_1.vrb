@@ -1,0 +1,5 @@
+\frametitle{\protect \shortciteA {brown2024cognitive} Results}
+\vspace{-1em}
+\begin{center}
+\includegraphics[width = \columnwidth, trim = {0cm 0cm 0cm 0cm}, clip]{../analyses/figures/brownResults.png}\\
+\end{center}

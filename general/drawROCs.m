@@ -47,8 +47,9 @@ for frogIdx = 1:d.nFrogs
    A = gca;
 
    ax = get(gca, 'position');
-   normalizedPosition = [ax(1)+ax(3)-0.11, ax(2)+0.01, 0.14, 0.14*6/5];
-   hAxes = axes('Position', normalizedPosition);
+  % normalizedPosition = [ax(1)+ax(3)-0.11, ax(2)+0.01, 0.14, 0.14*6/5];
+    normalizedPosition = [ax(1)+ax(3)-0.11, ax(2)+0.025, 0.12, 0.12*6/5];
+  hAxes = axes('Position', normalizedPosition);
    axis off;
    axes(hAxes);
    imshow(uint8(d.images(:, :, :, frogIdx)));
