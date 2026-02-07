@@ -1,5 +1,5 @@
-\frametitle{\protect \shortciteA {brown2024cognitive} Results}
+\frametitle{Signal Detection Parameter Inferences}
 \vspace{-1em}
 \begin{center}
-\includegraphics[width = \columnwidth, trim = {0cm 0cm 0cm 0cm}, clip]{../analyses/figures/brownResults.png}\\
+\includegraphics[width = \columnwidth, trim = {0cm 0cm 0cm 0cm}, clip]{../models/figures/jags_signalDetectionNoDifferences_n_citizenFrogsAll_parameters.eps}\\
 \end{center}

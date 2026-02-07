@@ -5,3 +5,5 @@
 \beamer@sectionintoc {5}{Discussion}{21}{0}{5}
 \beamer@sectionintoc {6}{Thanks!}{23}{0}{6}
 \contentsline {section}{References}{24}{}%
+\beamer@sectionintoc {8}{\shortciteA {brown2024cognitive} Model and Results}{25}{0}{7}
+\beamer@sectionintoc {9}{Performance of Other Cognitive Models}{28}{0}{8}

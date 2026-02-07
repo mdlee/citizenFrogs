@@ -30,7 +30,7 @@ CI = [2.5 97.5];
         axis equal; axis square;
 
         ylabel('Accuracy', 'fontsize', fontSize+2);
-        xlabel('Detection Probability', 'fontsize', fontSize+2);
+        xlabel('Discriminability', 'fontsize', fontSize+2);
         Raxes(gca, 0.01, 0.01);
 
         for i = 1:d.nPeople
@@ -65,7 +65,7 @@ CI = [2.5 97.5];
         moveAxis(gca, [1 1 1 1], [0 0.02 0 0]);
         axis equal; axis square;
 
-        xlabel('Guessing Probability', 'fontsize', fontSize+2);
+        xlabel('Bias', 'fontsize', fontSize+2);
         Raxes(gca, 0.01, 0.01);
 
         for i = 1:d.nPeople
