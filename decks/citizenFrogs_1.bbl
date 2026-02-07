@@ -56,4 +56,34 @@ Lee, M\BPBI D.%
 \begin{APACrefDOI} \doi{10.1177/09637214241264292} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
+\bibitem [\protect \citeauthoryear {%
+Whitney%
+, Sweeny%
+\BCBL {}\ \BBA {} Corbett%
+}{%
+Whitney%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+whitney2014ensemble}
+\APACinsertmetastar {%
+whitney2014ensemble}%
+\begin{APACrefauthors}%
+Whitney, D.%
+, Sweeny, T\BPBI D.%
+\BCBL {}\ \BBA {} Corbett, J\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Visual ensemble statistics are represented as gradients
+  of crowding} {Visual ensemble statistics are represented as gradients of
+  crowding}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature Neuroscience}{17}{1}{12--14}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/nn.3603} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
 \end{thebibliography}

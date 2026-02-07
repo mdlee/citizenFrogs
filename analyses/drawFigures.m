@@ -6,14 +6,15 @@ close all;
 printFigures = true;
 
 analysisList = {...
-   %  'voteProportion'; ...
-   % 'voteMajority'; ...
+   % 'voteProportion'; ...
+  %  'voteMajority'; ...
    %'voteROCs'; ...
    % 'frogPond'; ...
    % 'frogPondZonderKikker'; ...
    % 'frogPondMale'; ...
    %'peopleByClipByFrog'; ...
-   'peopleByClip'; ...
+   %'peopleByClip'; ...
+   'threeModels'; ...
    };
 
 % load data
@@ -86,7 +87,7 @@ for analysisIdx = 1:numel(analysisList)
          axes(A);
          clear T
          T(1) = text(0.15, 1.05, 'environment');
-         T(2) = text(0.7, 1.05, 'scientist');
+         T(2) = text(0.7, 1.05, 'person');
          T(3) = text(1, 1.05, 'data');
 
          set(T, 'fontsize', fontSize+2, 'fontweight', 'bold', ...
@@ -187,7 +188,7 @@ for analysisIdx = 1:numel(analysisList)
          axes(A);
          clear T
          T(1) = text(0.15, 1.05, 'environment');
-         T(2) = text(0.7, 1.05, 'scientist');
+         T(2) = text(0.7, 1.05, 'person');
          T(3) = text(1, 1.05, 'data');
 
          set(T, 'fontsize', fontSize+2, 'fontweight', 'bold', ...
@@ -237,7 +238,7 @@ for analysisIdx = 1:numel(analysisList)
          axes(A);
          clear T
          T(1) = text(0.15, 1.05, 'environment');
-         T(2) = text(0.7, 1.05, 'scientist');
+         T(2) = text(0.7, 1.05, 'person');
          T(3) = text(1, 1.05, 'data');
 
          set(T, 'fontsize', fontSize+2, 'fontweight', 'bold', ...
@@ -465,6 +466,208 @@ for analysisIdx = 1:numel(analysisList)
          barh(keep, yVal(keep), 0.8, ...
             'facecolor' , colorMarginal , ...
             'edgecolor' , colorMarginal'                );
+
+      case 'threeModels'
+
+                 w = 0.2; h = 0.25; r = 0.6; gap = 0.015;
+                 fontSize = 22;
+
+                  F = figure; clf; hold on;
+         setFigure(F, [0.1 0.2 0.8 0.6], '');
+
+         subplot(1, 3, 1); cla; hold on;
+         set(gca, ...
+            'units', 'norm', 'position', [0.1 0.25 0.25 0.25], ...
+            'clipping', 'off');
+      axis off;
+
+         axis([0 1 -r r]);
+         T(1) = text(0, r, 'present  ', 'hor', 'right');
+         H(1) = plot(0, r, 'o');
+         L(1) = plot([0 w], r+[0 h], 'k-');
+         L(2) = plot([0 w], r+[0 -h], 'k-');
+         T(2) = text(w, r+h, '  hit', 'hor', 'left');
+         H(2) = plot(w, r+h, 'o');
+         H(3) = plot(w, r-h, 'o');
+         L(3) = plot([w 2*w], r-[h h+h/2], 'k-');
+         L(4) = plot([w 2*w], r-[h h-h/2], 'k-');
+
+         T(3) = text(2*w, r-h+h/2, '  hit', 'hor', 'left');
+         H(4) = plot(2*w,  r-h+h/2, 'o');
+         T(4) = text(2*w, r-h-h/2, '  miss', 'hor', 'left');
+         H(5) = plot(2*w,  r-h-h/2, 'o');
+
+         T(5) = text(0, -r, 'absent  ', 'hor', 'right');
+         H(6) = plot(0, -r, 'o');
+         L(5) = plot([0 w], -r+[0 w], 'k-');
+         L(6) = plot([0 w], -r+[0 -w], 'k-');
+         T(6) = text(w, -r+w, '  false alarm', 'hor', 'left');
+         H(7) = plot(w, -r+w, 'o');
+         T(7) = text(w, -r-w, '  correct rejection', 'hor', 'left');
+         H(8) = plot(w, -r-w, 'o');
+
+         TU(1) = text(w/2, r+h/2+gap, '$\alpha$');
+         TL(1) = text(w/2, r-h/2-gap, '$1-\alpha$');
+         TU(2) = text(w+w/2, r-h+h/2, '$\beta$');
+         TL(2) = text(w+w/2, r-h-h/2-gap, '$1-\beta$');
+         TU(3) = text(w/2, -r+h/2, '$\beta$');
+         TL(3) = text(w/2, -r-h/2-gap, '$1-\beta$');
+
+
+         set(T, 'fontsize', fontSize, 'fontweight', 'normal', ...
+            'vert', 'mid');
+         set(H, 'markerfacecolor', 'k', 'markeredgecolor', 'k', ...
+            'markersize', 6)
+         set(TU, 'fontsize', fontSize, 'fontweight', 'normal', ...
+            'vert', 'bot', 'interp', 'latex', 'hor', 'cen');
+         set(TL, 'fontsize', fontSize, 'fontweight', 'normal', ...
+            'vert', 'top', 'interp', 'latex', 'hor', 'cen');
+
+          subplot(1, 3, 2); cla; hold on;
+         set(gca, ...
+            'units', 'norm', 'position', [0.4 0.25 0.25 0.25], ...
+            'clipping', 'off');
+
+      axis off;
+
+         axis([0 1 -r r]);
+         T(1) = text(0, r, 'present  ', 'hor', 'right');
+         H(1) = plot(0, r, 'o');
+         L(1) = plot([0 w], r+[0 h], 'k-');
+         L(2) = plot([0 w], r+[0 -h], 'k-');
+         T(2) = text(w, r+h, '  hit', 'hor', 'left');
+         H(2) = plot(w, r+h, 'o');
+         H(3) = plot(w, r-h, 'o');
+         L(3) = plot([w 2*w], r-[h h+h/2], 'k-');
+         L(4) = plot([w 2*w], r-[h h-h/2], 'k-');
+
+         T(3) = text(2*w, r-h+h/2, '  hit', 'hor', 'left');
+         H(4) = plot(2*w,  r-h+h/2, 'o');
+         T(4) = text(2*w, r-h-h/2, '  miss', 'hor', 'left');
+         H(5) = plot(2*w,  r-h-h/2, 'o');
+
+         T(5) = text(0, -r, 'absent  ', 'hor', 'right');
+         H(6) = plot(0, -r, 'o');
+         L(5) = plot([0 w], -r+[0 h], 'k-');
+         L(6) = plot([0 w], -r+[0 -h], 'k-');
+         T(6) = text(w, -r+h, '  false alarm', 'hor', 'left');
+         H(7) = plot(w, -r+h, 'o');
+         H(8) = plot(w, -r-h, 'o');
+         L(7) = plot([w 2*w], -r-[h h+h/2], 'k-');
+         L(8) = plot([w 2*w], -r-[h h-h/2], 'k-');
+
+         T(7) = text(2*w, -r-h+h/2, '  false alarm', 'hor', 'left');
+         H(9) = plot(2*w,  -r-h+h/2, 'o');
+         T(8) = text(2*w, -r-h-h/2, '  correct rejection', 'hor', 'left');
+         H(10) = plot(2*w,  -r-h-h/2, 'o');
+
+         TU(1) = text(w/2, r+h/2+gap, '$\alpha$');
+         TL(1) = text(w/2, r-h/2-gap, '$1-\alpha$');
+         TU(2) = text(w+w/2, r-h+h/2, '$\beta$');
+         TL(2) = text(w+w/2, r-h-h/2-gap, '$1-\beta$');
+         TU(3) = text(w/2, -r+h/2+gap, '$\alpha$');
+         TL(3) = text(w/2, -r-h/2-gap, '$1-\alpha$');
+         TU(4) = text(w+w/2, -r-h+h/2, '$\beta$');
+         TL(4) = text(w+w/2, -r-h-h/2-gap, '$1-\beta$');
+
+         set(T, 'fontsize', fontSize, 'fontweight', 'normal', ...
+            'vert', 'mid');
+         set(H, 'markerfacecolor', 'k', 'markeredgecolor', 'k', ...
+            'markersize', 6)
+         set(TU, 'fontsize', fontSize, 'fontweight', 'normal', ...
+            'vert', 'bot', 'interp', 'latex', 'hor', 'cen');
+         set(TL, 'fontsize', fontSize, 'fontweight', 'normal', ...
+            'vert', 'top', 'interp', 'latex', 'hor', 'cen');
+
+
+
+                  subplot(1, 3, 3); cla; hold on;
+         set(gca, ...
+            'units', 'norm', 'position', [0.65 0.2 0.25 0.4], ...
+            'clipping', 'off');
+     % axis off;
+
+      kO = 0.85;
+            dO = 2.25;
+            clear H;
+            
+            % constants
+            x = -2:.01:6;
+            colors = {pantone.DuskBlue;  pantone.Treetop; pantone.Custard; pantone.Marsala};
+            labels = {'hit', 'false alarm', 'miss', 'correct rejection'};
+            scale = 0.8;
+            jig = -0.185;
+            notch = 0.2;
+
+            set(gca, ...
+                'xlim'       , x([1 end])  , ...
+                'xtick'      , 0:x(end)    , ...
+                'ylim'        , [0 1], ...
+                'ycolor'      , 'none'    , ...
+                'box'        , 'off'                 , ...
+                'tickdir'    , 'out'                 , ...
+                'layer'      , 'top'                 , ...
+                'ticklength' , [0.01 0]              , ...
+                'layer'      , 'top'                 , ...
+                'fontsize'   , fontSize              );
+            set(gca, 'xtick', [0  dO], 'xticklabel', {'0', ''});
+            
+            yS = scale*exp(-(x - dO).^2);
+            yN = scale*exp(-(x - 0).^2);
+            match1 = find(x > kO);
+            match2 = find(x < kO);
+            
+            H(1) = patch([x(match1(1)) x(match1) x(match1(1))], [0 yS(match1) 0], 'k', ...
+                'facecolor' , colors{1}, ...
+                'edgecolor' , 'w'               , ...
+                'facealpha' , 0.8               );
+            
+            H(2) = patch([x(match1(1)) x(match1) x(match1(1))], [0 yN(match1) 0], 'k', ...
+                'facecolor' , colors{4}, ...
+                'edgecolor' , 'w'               , ...
+                'facealpha' , 0.8               );
+            
+            H(4) = patch([x(match2(end)) x(match2) x(match2(end))], [0 yN(match2) 0], 'k', ...
+                'facecolor' , colors{3}, ...
+                'edgecolor' , 'w'               , ...
+                'facealpha' , 0.8               );
+            
+            H(3) = patch([x(match2(end)) x(match2) x(match2(end))], [0 yS(match2) 0], 'k', ...
+                'facecolor' , colors{2}, ...
+                'edgecolor' , 'w'               , ...
+                'facealpha' , 0.8               );
+            
+            
+            plot([kO kO], [0 scale], '-', ...
+                'linewidth', 2, ...
+                'color', pantone.Kale);
+            
+            text(kO, scale, '$k$', ...
+                'fontsize', fontSize+2, ...
+                'vertical', 'bottom', ...
+                'horizontal', 'center', ...
+                'interp', 'latex');
+            
+            text(dO, jig, '$d^\prime$', ...
+                'fontsize', fontSize+2, ...
+                'vertical', 'bottom', ...
+                'horizontal', 'center', ...
+                'interp', 'latex');
+            
+            L = legend(H, labels, ...
+                'fontsize', fontSize-2, ...
+                'box', 'off', ...
+                'autoupdate', 'off', ...
+                'location', 'northeast');
+            set(L, 'position', get(L, 'position') + [0.1 0 0 0]);
+
+            clear T
+            yVal = 1.2;
+            T(1) = text(0, yVal, 'Signal detection');
+            T(2) = text(-10, yVal, 'Two high threshold');
+            T(3) = text(-20, yVal, 'One high threshold');
+            set(T, 'fontsize', 20, 'fontweight', 'bold');
+
 
    end
 

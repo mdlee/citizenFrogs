@@ -1,5 +1,5 @@
-function  drawROCs(d, chains, tau, vote, pantone)
-%DRAWROCs Draw the ROC analysis of citizen frogs
+function  drawThreeROCs(d, chains, tau, vote, pantone)
+%DRAWROCs Draw the ROC analysis of citizen frogs, with both 
 
 fontSize = 16;
 tickWidth = 0.2;
@@ -7,7 +7,7 @@ curveTick = 0.001;
 lineWidth = 4;
 modelColor = pantone.Greenery;
 majorityColor = pantone.Fiesta;
-labs = {'cognitive model', 'behavior'};
+labs = {'model', 'behavior'};
 spLoc = [1 5 6 7 3 2 8];
 legLoc = 4;
 
@@ -116,5 +116,5 @@ if ~isempty(tau)
       'box', 'off', ...
       'fontsize', fontSize, ...
       'location', 'north');
-   set(L, 'pos', get(L, 'pos') + [0.05 0.45 0 0]);
+   set(L, 'pos', get(L, 'pos') + [0 0.5 0 0]);
 end

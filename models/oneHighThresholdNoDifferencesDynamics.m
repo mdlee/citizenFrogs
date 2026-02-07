@@ -14,7 +14,7 @@ dataList = {...
 figureList = { ...
  % 'parameters'; ...
   'ROCs'; ...
-  'environmentDynamics'; ...
+%  'environmentDynamics'; ...
   };
 
 trialsKeep = 1260; % 1260 is full
@@ -112,12 +112,20 @@ for dataIdx = 1:numel(dataList)
   d.truth = d.truth(:, 1:trialsKeep);
   vote = vote(:, 1:trialsKeep);
 
+
   for figureIdx = 1:numel(figureList)
 
     switch figureList{figureIdx}
       case 'ROCs'
 
-        drawROCs(d, chains, tau, vote, pantone);
+     tauEnvironment = tau;
+
+    otherModelName = 'oneHighThresholdNoDifferences_n';
+     otherFileName = sprintf('%s_%s_%s.mat', otherModelName, dataName, engine);
+    load(sprintf('storage/%s', otherFileName), 'chains', 'stats', 'diagnostics', 'info');
+  tauCognitive = get_matrix_from_coda(chains, 'tau');
+
+     drawThreeROCs(d, tauEnvironment, tauCognitive, vote, pantone);
 
         % detection, guess x accuracy
       case 'parameters'

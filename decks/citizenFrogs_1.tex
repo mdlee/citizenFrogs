@@ -3,7 +3,7 @@
 \input{mdlheader2}
 
 \title{Cognitive Models, Crowd Wisdom, Citizen Science, and Frogs: An Extension of \protect\shortciteA{brown2024cognitive}}
-
+\titlegraphic{\vspace{13em}\hfill\includegraphics[height=4cm]{figures/merlionFrog.png}}
 
 \begin{document}
 
@@ -12,7 +12,7 @@
 \begin{frame}[fragile]{Detecting Frogs}
 \vspace{-1em}
 \bi
-\i Citizen scientists listen to audio recording clips trying to detect the presence of various ground and tree frogs by their calls
+\i People take the role of ``citizen scientists'' by listening to audio clips trying to detect the presence of seven types of frogs by their calls
 \ei
 \begin{center}
 \includegraphics[width = \columnwidth, trim = {0cm 0cm 0cm 0cm}, clip]{../analyses/figures/frogPond_0.eps}\\
@@ -22,18 +22,7 @@
 \begin{frame}[fragile]{Detecting Frogs}
 \vspace{-1em}
 \bi
-\i Multiple citizen scientists can independently listen to the same clip
-\vspace{1em}
-\ei
-\begin{center}
-\includegraphics[width = \columnwidth, trim = {0cm 0cm 0cm 0cm}, clip]{../analyses/figures/frogPondMale.eps}\\
-\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Detecting Frogs}
-\vspace{-1em}
-\bi
-\i The same citizen scientist can listen to multiple clips
+\i The same person can listen to multiple clips
 \vspace{1em}
 \ei
 \begin{center}
@@ -41,13 +30,26 @@
 \end{center}
 \end{frame}
 
+\begin{frame}[fragile]{Detecting Frogs}
+\vspace{-1em}
+\bi
+\i Multiple people can independently listen to the same clip
+\vspace{1em}
+\ei
+\begin{center}
+\includegraphics[width = \columnwidth, trim = {0cm 0cm 0cm 0cm}, clip]{../analyses/figures/frogPondMale.eps}\\
+\end{center}
+\end{frame}
+
+\section{Behavioral Data}
+
 \begin{frame}[fragile]{Data}
 \vspace{-1em}
 \bi
 \i The joint and marginal distributions of people judging clips shows
 \bi 
 \j lots of people judge few clips, but a few people judge many
-\j the data collection system aims to have five judgments for each frog in each clip
+\j the data collection system aims to have five judgments for each type of frog in each clip
 \ei
 \vspace{0em}
 \ei
@@ -61,7 +63,7 @@
 \vspace{-1em}
 \bi
 \i The blue marks indicate the ground truth (expert derived) presence of each type of frog across the sequence of clips
-\i The yellow bars show the proportion of citizen scientists who judged a frog was present in each clip
+\i The yellow bars show the proportion of people who judged a frog was present in each clip
 \vspace{1em}
 \ei
 \begin{center}
@@ -75,7 +77,7 @@
 \i ROC curves show reasonable wisdom the crowd performance for five of the frog types
 \bi
 \j the BMTF and GSF tree frogs are not well detected
-\j both are rarely present but people produce many false alarms
+\j both are rarely present but people often report detecting them
 \ei
 \ei
 \begin{center}
@@ -83,8 +85,10 @@
 \end{center}
 \end{frame}
 
+\section{Model-Based Wisdom of the Crowd}
+
 \begin{frame}[fragile]{Model-Based Wisdom of the Crowd}
-\vspace{-1em}
+\vspace{-2em}
 \bi
 \i The model-based approach uses cognitive models to explain how the behavior data were produced \shortcite{brown2024cognitive, lee2024using}
 \bi
@@ -92,41 +96,50 @@
 \j make inferences about latent states of nature
 \ei
 \ei
+\vspace{1em}
 \begin{center}
 \includegraphics[width = \columnwidth, trim = {0cm 0cm 0cm 0cm}, clip]{../analyses/figures/frogPond.eps}\\
 \end{center}
 \end{frame}
 
-\begin{frame}[fragile]{Model}
+\begin{frame}[fragile]{One-High Threshold Model}
 \vspace{-1em}
 \bi
-\i The model assumes frog $f$ in clip $j$ is either $\tau_{fj}=1$ present or $\tau_{fj}=1$ absent with a base-rate that depends on the frog $\psi_f$
+\i The model assumes frog $f$ in clip $j$ is either $\tau_{fj}=1$ present or $\tau_{fj}=0$ absent with a base-rate that depends on the frog $\phi_f$
 \begin{eqnarray}
 \tau_{fj} &\sim& \operatorname{Bernoulli}\bigl(\phi_j\bigr) \nonumber\\
-\phi_j &\sim& \operatorname{Uniform}\bigl(0, 1\bigr) \nonumber
+\phi_j &\sim& \operatorname{uniform}\bigl(0, 1\bigr) \nonumber
 \end{eqnarray}
 \i Individual $i$ judges frog $f$ in clip $j$ to be $y_{ijf}=1$ present with probability $\theta_{ijf}$ given by the one-high threshold model
 \begin{eqnarray}
-\alpha_i, \beta_i  &\sim & \operatorname{Uniform}\bigl(0, 1\bigr) \nonumber\\
+\alpha_i, \beta_i  &\sim & \operatorname{uniform}\bigl(0, 1\bigr) \nonumber\\
 \theta_{ijf} & = & \begin{cases}
 \alpha_i+\left(1-\alpha_i\right)\beta_i & \mathrm{if}\ \tau_{fj}=1\\
 \beta_i & \mathrm{if}\ \tau_{fj}=0
 \end{cases}\nonumber\\
-y_{ij} & \sim & \operatorname{Bernoulli}\bigl(\theta_{ij}\bigr)\nonumber
+y_{ijf} & \sim & \operatorname{Bernoulli}\bigl(\theta_{ijf}\bigr)\nonumber
 \end{eqnarray}
 \i Implemented the model in JAGS and Stan
 \ei
 \end{frame}
 
+\begin{frame}[fragile]{Inferences about both the Stimulus and Cognitive Processes}
+\vspace{-2em}
+\begin{center}
+\includegraphics[width = 0.85\columnwidth, trim = {0cm 0cm 0cm 0cm}, clip]{/home/mdlee/Dropbox/CC2/content/figures/graphicalModels/citizenFrogs.eps}\\
+\vspace{1em}
+\includegraphics[width = \columnwidth, trim = {0cm 0cm 0cm 0cm}, clip]{../analyses/figures/frogPond.eps}\\
+\end{center}
+\end{frame}
+
+
 
 \begin{frame}[fragile]{Model-Based Crowd Performance}
-\vspace{-1em}
+\vspace{-1.5em}
 \bi
-\i The performance of the model closely matches the results for the \citeA{brown2024cognitive} model
-\bi
-\j both model-based approaches improve on the tallying judgements
+\i The model-based approach performs better than the standard wisdom of the crowd aggregation of behavioral judgments
 \ei
-\ei
+\vspace{1em}
 \begin{center}
 \includegraphics[width = \columnwidth, trim = {0cm 0cm 0cm 0cm}, clip]{../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_ROCs.eps}\\
 \end{center}
@@ -135,9 +148,9 @@ y_{ij} & \sim & \operatorname{Bernoulli}\bigl(\theta_{ij}\bigr)\nonumber
 \begin{frame}[fragile]{Inferences about Detection and Guessing Bias}
 \vspace{-1em}
 \bi
-\i Inferences about detection ability $\alpha_i$ and guessing bias $\beta_i$ provide some \emph{prediction} about the performance of individual $i$
+\i Inferences about detection ability $\alpha_i$ and guessing bias $\beta_i$ provide \emph{predictions} about the performance of individual $i$
 \bi
-\j this allows, for example, ``yes'' judgments from non-experts to be explained away as guessing
+\j the accuracy of these predictions allows, for example, ``yes'' judgments from non-experts to be explained away as guessing
 \ei
 \ei
 \begin{center}
@@ -145,6 +158,26 @@ y_{ij} & \sim & \operatorname{Bernoulli}\bigl(\theta_{ij}\bigr)\nonumber
 \end{center}
 \end{frame}
 
+\section{Which Cognitive Model?}
+
+\begin{frame}[fragile]{Three Cognitive Models}
+\vspace{-1em}
+\bi
+\i There are many other possible cognitive models of the detection decisions
+\bi 
+\j e.g., the two high threshold model, signal detection models, \textellipsis
+\ei
+\i They all seem to perform very similarly
+\bi 
+\j same ROC curves, and an ``ability'' parameter that relates to observed accuracy
+\ei
+\ei
+\begin{center}
+\includegraphics[width = \columnwidth, trim = {0cm 0cm 0cm 3cm}, clip]{../analyses/figures/threeModels.eps}\\
+\end{center}
+\end{frame}
+
+\section{Modeling the Environment}
 
 \begin{frame}[fragile]{Model-Based Crowd and the Truth}
 \vspace{-1em}
@@ -160,13 +193,12 @@ y_{ij} & \sim & \operatorname{Bernoulli}\bigl(\theta_{ij}\bigr)\nonumber
 \end{center}
 \end{frame}
 
-
 \begin{frame}[fragile]{Environment Dynamics Model and the Truth}
 \vspace{-1em}
 \bi 
 \i The environmental model has a switching probability $\gamma_f$ for frog $f$
 \begin{eqnarray}
-\gamma_f & \sim & \operatorname{Uniform}\bigl(0, 1\bigr) \nonumber \\
+\gamma_f & \sim & \operatorname{uniform}\bigl(0, 1\bigr) \nonumber \\
 \tau_{f1} &\sim& \operatorname{Bernoulli}\bigl(\frac{1}{2}\bigr) \nonumber\\
 \tau_{fk} & \sim& \begin{cases}
 \operatorname{Bernoulli}\bigl(\gamma_f \bigr) & \mathrm{if}\ \tau_{f\left(k-1\right)}=1\\
@@ -181,14 +213,39 @@ y_{ij} & \sim & \operatorname{Bernoulli}\bigl(\theta_{ij}\bigr)\nonumber
 
 \begin{frame}[fragile]{Environment Dynamics Model Performance}
 \vspace{-1em}
+\vspace{-1em}
+\bi
+\i Performance is now near-perfect for three of the frog types, and better for the other two with behavioral signal
+\ei
+\vspace{1em}
 \begin{center}
 \includegraphics[width = \columnwidth, trim = {0cm 0cm 0cm 0cm}, clip]{../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrogsAll_ROCs.eps}\\
 \end{center}
 \end{frame}
 
+\section{Discussion}
+
+\begin{frame}[fragile]{Considering Environmental Structure}
+\vspace{-1em}
+\bi
+\i It is easy as a cognitive modeler to focus too hard on internal cognitive processes
+\i The dynamics of the environment also influence observed behavior, and should be part of a complete model of the data-generating process
+\vspace{1em}
+\i Focusing on environmental regularities for this frog task could lead to improvement in
+\bi
+\j \emph{model development}: more complicated environmental models are possible
+\bi 
+\j e.g., model the covariances in the presence of frog types
+\ei
+\j \emph{data collection}: presenting people with random clips corrupts the environmental structure their cognition may be able to use to make better judgments \cite{whitney2014ensemble}
+\ei
+\ei 
+\end{frame}
+
+\section{Thanks!}
 
 \begin{frame}[allowframebreaks]{References}
-\bibliographystyle{apacite}
+\bibliographystyle{apacite}{}{}
 \bibliography{citizenFrogs}
 \end{frame}
 

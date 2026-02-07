@@ -1,1 +1,7 @@
-\contentsline {section}{References}{15}{}%
+\beamer@sectionintoc {1}{Behavioral Data}{5}{0}{1}
+\beamer@sectionintoc {2}{Model-Based Wisdom of the Crowd}{9}{0}{2}
+\beamer@sectionintoc {3}{Which Cognitive Model?}{15}{0}{3}
+\beamer@sectionintoc {4}{Modeling the Environment}{17}{0}{4}
+\beamer@sectionintoc {5}{Discussion}{21}{0}{5}
+\beamer@sectionintoc {6}{Thanks!}{23}{0}{6}
+\contentsline {section}{References}{24}{}%

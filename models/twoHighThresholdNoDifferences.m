@@ -4,7 +4,7 @@
 clear; close all;
 
 preLoad = true;
-printFigures = false;
+printFigures = true;
 
 dataDir = ('../data/');
 dataList = {...
@@ -12,9 +12,12 @@ dataList = {...
    };
 
 figureList = { ...
-   'quickDirty'; ...
-   %'ROCs'; ...
-   };
+%'parameters'; ...
+ 'ROCs'; ...
+% 'environmentDynamics'; ...
+  };
+
+trialsKeep = 1260; % 1260 is full
 
 % MCMC properties
 engine = 'jags';
@@ -29,8 +32,10 @@ doParallel = 1;     % whether MATLAB parallel toolbox parallizes chains
 
 %% Constants
 load pantoneColors pantone;
+generalDir = '../general/';
 
 %% Loop over datasets
+addpath(generalDir);
 for dataIdx = 1:numel(dataList)
    dataName = dataList{dataIdx};
    load([dataDir dataName], 'd');
@@ -104,244 +109,45 @@ for dataIdx = 1:numel(dataList)
 
    end
 
-   alpha = get_matrix_from_coda(chains, 'alpha');
-   beta = get_matrix_from_coda(chains, 'beta');
-   tau = get_matrix_from_coda(chains, 'tau');
-   accuracy = (d.personCorrect+1)./(d.personTotal+2);
-   if d.nFrogs == 1
-      vote = nansum(d.y, 2)./sum(~isnan(d.y), 2);
-   else
-      vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
-   end
+    alpha = get_matrix_from_coda(chains, 'alpha');
+  beta = get_matrix_from_coda(chains, 'beta');
+  tau = get_matrix_from_coda(chains, 'tau');
+  accuracy = (d.personCorrect+1)./(d.personTotal+2);
+  vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
 
-   for figureIdx = 1:numel(figureList)
+  tau = tau(1:trialsKeep, :);
+  d.truth = d.truth(:, 1:trialsKeep);
+  vote = vote(:, 1:trialsKeep);
 
-      switch figureList{figureIdx}
-         case 'ROCs'
+  for figureIdx = 1:numel(figureList)
 
-            fontSize = 16;
-            tickWidth = 0.2;
-            curveTick = 0.001;
-            lineWidth = 4;
-            modelColor = pantone.Greenery;
-            majorityColor = pantone.Fiesta;
-            labs = {'model', 'vote'};
+    switch figureList{figureIdx}
+      case 'ROCs'
 
-            [nRows, nCols] = subplotArrange(d.nFrogs);
+        drawROCs(d, chains, tau, vote, pantone);
 
-            F = figure; clf; hold on;
-            setFigure(F, [0.2 0.2 0.6 0.5], '');
+        % detection, guess x accuracy
+      case 'parameters'
 
-            for frogIdx = 1:d.nFrogs
+        drawParametersHighThreshold(d, chains, alpha, beta, accuracy, pantone);
 
-               subplot(nRows, nCols, frogIdx); cla; hold on;
+      case 'environmentDynamics'
 
-               set(gca, ...
-                  'xlim'       , [0 1]                , ...
-                  'xtick'      , 0:tickWidth:1            , ...
-                  'xticklabelrot', 0, ...
-                  'ylim'       , [0 1]                 , ...
-                  'ytick'      , 0:tickWidth:1             , ...
-                  'xgrid'       , 'off'                       , ...
-                  'ygrid'       , 'off'                       , ...
-                  'box'        , 'off'                     , ...
-                  'color'       , 'none' , ...
-                  'tickdir'    , 'out'                     , ...
-                  'layer'      , 'top'                     , ...
-                  'ticklength' , [0.02 0]                  , ...
-                  'layer'      , 'top'                     , ...
-                  'fontsize'   , fontSize                  );
-               moveAxis(gca, [1 1 1 1], [0 0.02 0 0]);
-               axis equal; axis square;
-               if frogIdx == (nRows*nCols - nCols + 1)
-                  xlabel('False Alarm Rate', 'fontsize', fontSize+2);
-                  ylabel('Hit Rate', 'fontsize', fontSize+2);
-               end
-
-               plot([0 1], [0 1], 'k--', 'linewidth', 1);
-               Raxes(gca, 0.01, 0.01);
-               A = gca;
-
-               if d.nFrogs == 1
-                  % ax = get(gca, 'position');
-                  % normalizedPosition = [ax(1)+ax(3)-0.11, ax(2)+0.01, 0.14, 0.14*6/5];
-                  % hAxes = axes('Position', normalizedPosition);
-                  % axis off;
-                  % axes(hAxes);
-                  % imshow(uint8(d.images));
-                  %
-                  % axes(A);
-                  text(0, 1, d.frogs, ...
-                     'vert', 'top', ...
-                     'hor', 'left', ...
-                     'fontweight', 'bold', ...
-                     'fontsize', fontSize);
-               else
-                  ax = get(gca, 'position');
-                  normalizedPosition = [ax(1)+ax(3)-0.11, ax(2)+0.01, 0.14, 0.14*6/5];
-                  hAxes = axes('Position', normalizedPosition);
-                  axis off;
-                  axes(hAxes);
-                  imshow(uint8(d.images(:, :, :, frogIdx)));
-
-                  axes(A);
-                  text(0, 1, d.frogs{frogIdx}, ...
-                     'vert', 'top', ...
-                     'hor', 'left', ...
-                     'fontweight', 'bold', ...
-                     'fontsize', fontSize);
-               end
-
-
-               % model
-               hitList = [];
-               faList = [];
-               for threshold = 0:curveTick:1
-                  if d.nFrogs == 1
-                     tauPrime = (tau >= threshold);
-                     hit = length(find(tauPrime == 1 & d.truth == 1))/sum(d.truth == 1);
-                     fa = length(find(tauPrime == 1 & d.truth == 0))/sum(d.truth == 0);
-                  else
-                     tauPrime = tau(:, frogIdx) >= threshold;
-                     hit = length(find(tauPrime' == 1 & d.truth(frogIdx, :) == 1))/sum(d.truth(frogIdx, :) == 1);
-                     fa = length(find(tauPrime' == 1 & d.truth(frogIdx, :) == 0))/sum(d.truth(frogIdx, :) == 0);
-                  end
-                  hitList = [hitList hit];
-                  faList = [faList fa];
-               end
-
-               H(1) = plot(faList, hitList, '-', ...
-                  'linewidth', lineWidth, ...
-                  'color', modelColor);
-
-               % vote
-               hitList = [];
-               faList = [];
-               for threshold = 0:curveTick:1
-                  if d.nFrogs == 1
-                     votePrime = (vote >= threshold);
-                     hit = length(find(votePrime == 1 & d.truth == 1))/sum(d.truth == 1);
-                     fa = length(find(votePrime == 1 & d.truth == 0))/sum(d.truth == 0);
-                  else
-                     votePrime = vote(frogIdx, :) >= threshold;
-                     hit = length(find(votePrime == 1 & d.truth(frogIdx, :) == 1))/sum(d.truth(frogIdx, :) == 1);
-                     fa = length(find(votePrime == 1 & d.truth(frogIdx, :) == 0))/sum(d.truth(frogIdx, :) == 0);
-                  end
-                  hitList = [hitList hit];
-                  faList = [faList fa];
-               end
-
-               H(2) = plot(faList, hitList, '-', ...
-                  'linewidth', lineWidth, ...
-                  'color', majorityColor);
-
-               % [hitList' faList']
-               %
-               % pause;
-
-               if frogIdx == d.nFrogs
-                  L = legend(H, labs, ...
-                     'box', 'off', ...
-                     'fontsize', fontSize, ...
-                     'location', 'east');
-                  set(L, 'pos', get(L, 'pos') + [0.1 0 0 0]);
-               end
-
-
-               %return;
-            end
-
-            % Quick and dirty phi, detection x accuracy, bias x accuracy
-         case 'quickDirty'
-
-            CI = [2.5 97.5];
-            tickWidth = 0.2;
-            fontSize = 16;
-
-            F = figure; clf; hold on;
-            setFigure(F, [0.2 0.2 0.6 0.5], '');
-
-            subplot(131); hold on;
-            set(gca, ...
-               'xlim'       , [0 1]                , ...
-               'xtick'      , 0:tickWidth:1            , ...
-               'xticklabelrot', 0, ...
-               'ylim'       , [0 1]                 , ...
-               'ytick'      , 0:tickWidth:1             , ...
-               'xgrid'       , 'off'                       , ...
-               'ygrid'       , 'off'                       , ...
-               'box'        , 'off'                     , ...
-               'color'       , 'none' , ...
-               'tickdir'    , 'out'                     , ...
-               'layer'      , 'top'                     , ...
-               'ticklength' , [0.02 0]                  , ...
-               'layer'      , 'top'                     , ...
-               'fontsize'   , fontSize                  );
-            moveAxis(gca, [1 1 1 1], [0 0.02 0 0]);
-            axis equal; axis square;
-
-            ylabel('Accuracy', 'fontsize', fontSize+2);
-            xlabel('Detection Probability', 'fontsize', fontSize+2);
-            Raxes(gca, 0.01, 0.01);
-
-            for i = 1:d.nPeople
-               bounds = prctile(chains.(sprintf('alpha_%d', i)), CI);
-               plot(bounds, [accuracy(i) accuracy(i)],  '-', ...
-                  'color', pantone.GlacierGray);
-            end
-            for i = 1:d.nPeople
-               plot(alpha(i), accuracy(i), 'o', ...
-                  'markersize', 5, ...
-                  'markerfacecolor', pantone.ClassicBlue, ...
-                  'markeredgecolor', 'w');
-            end
-
-            subplot(132); hold on;
-            set(gca, ...
-               'xlim'       , [0 1]                , ...
-               'xtick'      , 0:tickWidth:1            , ...
-               'xticklabelrot', 0, ...
-               'ylim'       , [0 1]                 , ...
-               'ytick'      , 0:tickWidth:1             , ...
-               'xgrid'       , 'off'                       , ...
-               'ygrid'       , 'off'                       , ...
-               'box'        , 'off'                     , ...
-               'color'       , 'none' , ...
-               'tickdir'    , 'out'                     , ...
-               'layer'      , 'top'                     , ...
-               'ticklength' , [0.02 0]                  , ...
-               'layer'      , 'top'                     , ...
-               'fontsize'   , fontSize                  );
-            moveAxis(gca, [1 1 1 1], [0 0.02 0 0]);
-            axis equal; axis square;
-
-            xlabel('Guessing Probability', 'fontsize', fontSize+2);
-            Raxes(gca, 0.01, 0.01);
-
-            for i = 1:d.nPeople
-               bounds = prctile(chains.(sprintf('beta_%d', i)), CI);
-               plot(bounds, [accuracy(i) accuracy(i)],  '-', ...
-                  'color', pantone.GlacierGray);
-            end
-            for i = 1:d.nPeople
-               plot(beta(i), accuracy(i), 'o', ...
-                  'markersize', 5, ...
-                  'markerfacecolor', pantone.ClassicBlue, ...
-                  'markeredgecolor', 'w');
-            end
+        drawEnvironmentDynamics(d, tau, pantone);
 
       end
 
-      % print
-      if printFigures
-         if ~isfolder('figures')
-            !mkdir figures
-         end
-         warning off;
-         print(sprintf('figures/%s_%s_%s.png', modelName, dataName, figureList{figureIdx}), '-dpng');
-         print(sprintf('figures/%s_%s_%s.eps', modelName, dataName, figureList{figureIdx}), '-depsc');
-         warning on;
+    % print
+    if printFigures
+      if ~isfolder('figures')
+        !mkdir figures
       end
-   end
+      warning off;
+      print(sprintf('figures/%s_%s_%s_%s.png', engine, modelName, dataName, figureList{figureIdx}), '-dpng');
+      print(sprintf('figures/%s_%s_%s_%s.eps', engine, modelName, dataName, figureList{figureIdx}), '-depsc');
+      warning on;
+    end
+  end
 
 end
+rmpath(generalDir);

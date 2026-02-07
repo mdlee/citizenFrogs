@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.8)  20 NOV 2025 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.8)  7 FEB 2026 15:21
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -8,14 +8,15 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2024/01/06 v3.71 A class for typesetting presentations
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty (/usr/share
-/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count187
 )
 \beamer@tempbox=\box51
 \beamer@tempcount=\count188
 \c@beamerpauses=\count189
+
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
 \beamer@slideinframe=\count190
 \beamer@minimum=\count191
@@ -23,7 +24,8 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 )
 \beamer@commentbox=\box53
 \beamer@modecount=\count192
-) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
 \headdp=\dimen140
@@ -69,15 +71,18 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \beamer@sectionadjust=\count276
 \beamer@toclastsection=\count277
 \beamer@tocsectionnumber=\count278
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty (/usr/sha
-re/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 ))
 \beamer@paperwidth=\skip49
 \beamer@paperheight=\skip50
+
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
+
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
@@ -93,27 +98,32 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen162
 \Gm@layoutvoffset=\dimen163
 \Gm@dimlist=\toks18
-) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/tex
-live/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-di
-st/tex/generic/pgf/utilities/pgfutil-common.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks19
 \pgfutil@tempdima=\dimen164
 \pgfutil@tempdimb=\dimen165
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box60
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/us
-r/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/sha
-re/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks20
 \pgfkeys@temptoks=\toks21
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
 .code.tex
 \pgfkeys@tmptoks=\toks22
-))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/
-share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
 \pgf@x=\dimen166
 \pgf@xa=\dimen167
 \pgf@xb=\dimen168
@@ -126,15 +136,16 @@ share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
 \c@pgf@countb=\count283
 \c@pgf@countc=\count284
 \c@pgf@countd=\count285
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen174
 \pgfmath@count=\count286
 \pgfmath@box=\box61
 \pgfmath@toks=\toks23
 \pgfmath@stack@operand=\toks24
 \pgfmath@stack@operation=\toks25
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 )
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
 .tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
@@ -150,30 +161,37 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
 tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
-thmetics.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathc
-alc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.
-code.tex
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count287
-))) (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
-) (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/sha
-re/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
+
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen175
 \Gin@req@width=\dimen176
-) (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/sha
-re/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \pgf@x=\dimen177
 \pgf@y=\dimen178
@@ -195,10 +213,12 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \t@pgf@tokb=\toks27
 \t@pgf@tokc=\toks28
 \pgf@sys@id@count=\count292
+
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-pdftex.def
+
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 
@@ -217,10 +237,12 @@ tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
+
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
@@ -231,8 +253,10 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
@@ -325,44 +349,59 @@ File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
 tex
 File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
 Package: xxcolor 2003/10/24 ver 0.1
 \XC@nummixins=\count298
 \XC@countmixins=\count299
-) (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
+
 (/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
 (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
+
 (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
 (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
@@ -371,14 +410,17 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 \@linkdim=\dimen267
 \Hy@linkcounter=\count301
 \Hy@pagecounter=\count302
+
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count303
+
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -395,14 +437,17 @@ Package hyperref Info: Backreferencing OFF on input line 4199.
 Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
 Package hyperref Info: Bookmarks ON on input line 4446.
 \c@Hy@tempcnt=\count304
+
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4784.
 \XeTeXLinkMargin=\dimen268
+
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
 (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
@@ -419,12 +464,14 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6088.
 Package hyperref Info: PDF/A mode OFF on input line 6093.
 \Hy@abspage=\count306
 
+
 Package hyperref Message: Stopped early.
 
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
+
 (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
@@ -432,18 +479,22 @@ with kernel methods
 )
 \Fld@listcount=\count307
 \c@bookmark@seq@number=\count308
+
 (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
 (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
-)) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaserequires.sty (/usr
-/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecompatibility.sty) (/usr/s
-hare/texlive/texmf-dist/tex/latex/beamer/beamerbasefont.sty (/usr/share/texlive
-/texmf-dist/tex/latex/amsfonts/amssymb.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecompatibility.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks29
@@ -452,32 +503,40 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
 Package: sansmathaccent 2020/01/31
+
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2023/07/07 v3.41 KOMA-Script package (file load hooks)
+
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
 Package: scrlfile-hook 2023/07/07 v3.41 KOMA-Script package (using LaTeX hooks)
 
+
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlogo.sty
 Package: scrlogo 2023/07/07 v3.41 KOMA-Script package (logo)
-))))) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty 
+)))))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
-)) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemisc.sty) (/usr/sh
-are/texlive/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty) (/usr/share/t
-exlive/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
 \beamer@argscount=\count309
 \beamer@lastskipcover=\skip51
 \beamer@trivlistdepth=\count310
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetitle.sty) (/usr/sh
-are/texlive/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasesection.sty
 \c@lecture=\count311
 \c@part=\count312
 \c@section=\count313
 \c@subsection=\count314
 \c@subsubsection=\count315
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
 \beamer@framebox=\box66
 \beamer@frametitlebox=\box67
 \beamer@zoombox=\box68
@@ -492,24 +551,30 @@ are/texlive/texmf-dist/tex/latex/beamer/beamerbasesection.sty
 \beamer@envbody=\toks30
 \framewidth=\dimen272
 \c@framenumber=\count319
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
 \beamer@verbatimfileout=\write4
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
 \beamer@splitbox=\box69
 \beamer@autobreakcount=\count320
 \beamer@autobreaklastheight=\dimen273
 \beamer@frametitletoks=\toks31
 \beamer@framesubtitletoks=\toks32
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
 \beamer@footins=\box70
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecolor.sty) (/usr/sh
-are/texlive/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
 \beamer@frameboxcopy=\box71
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetoc.sty) (/usr/shar
-e/texlive/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
 \beamer@sbttoks=\toks33
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty (/us
-r/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
 \bmb@box=\box72
 \bmb@colorbox=\box73
 \bmb@boxwidth=\dimen274
@@ -521,7 +586,8 @@ r/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
 \bmb@prevheight=\dimen280
 )
 \beamer@blockheadheight=\dimen281
-)) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
 (/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
 \@enLab=\toks34
@@ -531,25 +597,30 @@ Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
 \c@table=\count322
 \abovecaptionskip=\skip57
 \belowcaptionskip=\skip58
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenavigationsymbols.tex
 )
 \beamer@section@min@dim=\dimen282
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty (/usr/
-share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip59
+
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks35
 \ex@=\dimen283
-)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen284
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count323
@@ -599,7 +670,8 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks39
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks40
 \thm@bodyfont=\toks41
@@ -612,33 +684,41 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks45
 )
 \c@theorem=\count335
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasethemes.sty)) (/usr/
-share/texlive/texmf-dist/tex/latex/beamer/beamerthemedefault.sty (/usr/share/te
-xlive/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty) (/usr/share/texli
-ve/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty) (/usr/share/texlive
-/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty
 \beamer@dima=\dimen292
 \beamer@dimb=\dimen293
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty))
-) (./mdlheader2.tex (/usr/share/texlive/texmf-dist/tex/latex/academicons/academ
-icons.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
+(./mdlheader2.tex
+(/usr/share/texlive/texmf-dist/tex/latex/academicons/academicons.sty
 Package: academicons 2021/11/26 v1.9.1 Academicons Icons
-) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+
 (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texl
-ive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks46
 \XKV@tempa@toks=\toks47
 )
 \XKV@depth=\count336
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
-) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
 (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box76
@@ -648,6 +728,7 @@ Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \tc@urx=\dimen296
 \tc@ury=\dimen297
 Package trimclip Info: Using driver 'tc-pdftex.def'.
+
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
@@ -659,16 +740,19 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pheight=\dimen303
 \adjbox@pdepth=\dimen304
 \adjbox@ptotalheight=\dimen305
+
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \c@checkoddpage=\count337
-) (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box77
 \sift@deathcycles=\count338
 \@vwid@loff=\dimen306
 \@vwid@roff=\dimen307
-)) (/usr/share/texlive/texmf-dist/tex/latex/apacite/apacite.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/apacite/apacite.sty
 Package: apacite 2013/07/21 v6.03 APA citation
 \c@BibCnt=\count339
 \bibleftmargin=\skip65
@@ -676,16 +760,17 @@ Package: apacite 2013/07/21 v6.03 APA citation
 \bibparsep=\skip67
 \bibitemsep=\skip68
 \biblabelsep=\skip69
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemesplit.sty (/usr/sh
-are/texlive/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty) (/usr/share/
-texlive/texmf-dist/tex/latex/beamer/beamerouterthemesplit.sty)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemesplit.sty
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemesplit.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemestructurebold.st
 y))
 \sympureletters=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
 ut line 28.
-(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2023/07/08 v1.2f Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup7
 \symboldletters=\mathgroup8
@@ -695,7 +780,8 @@ Package bm Info: No bold for \U/msa/m/n, using \pmb.
 Package bm Info: No bold for \U/msb/m/n, using \pmb.
 \symboldpureletters=\mathgroup10
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
-) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen308
 \lightrulewidth=\dimen309
@@ -714,19 +800,23 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count342
 \@lastruleclass=\count343
 \@thisrulewidth=\dimen320
-) (/usr/share/texlive/texmf-dist/tex/latex/breqn/breqn.sty (/usr/share/texlive/
-texmf-dist/tex/latex/l3kernel/expl3.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/breqn/breqn.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2024-01-22 L3 programming layer (loader) 
+
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count344
 \l__pdf_internal_box=\box78
 ))
 Package: breqn 2021/10/28 v0.98l Breaking equations
+
 (/usr/share/texlive/texmf-dist/tex/latex/breqn/flexisym.sty
 Package: flexisym 2021/10/28 v0.98l Make math characters macros
 LaTeX Info: Redefining \textprime on input line 299.
 LaTeX Info: Redefining \not on input line 357.
+
 (/usr/share/texlive/texmf-dist/tex/latex/breqn/cmbase.sym
 File: cmbase.sym 2007/12/19 v0.92
 LaTeX Info: Redefining \hbar on input line 324.
@@ -752,14 +842,16 @@ LaTeX Info: Redefining \Longleftrightarrow on input line 353.
 LaTeX Info: Redefining \cdots on input line 357.
 LaTeX Info: Redefining \vdots on input line 360.
 LaTeX Info: Redefining \ddots on input line 365.
-) (/usr/share/texlive/texmf-dist/tex/latex/breqn/mathstyle.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/breqn/mathstyle.sty
 Package: mathstyle 2021/10/28 v0.98l Tracking mathstyle implicitly
 LaTeX Info: Redefining \displaystyle on input line 95.
 LaTeX Info: Redefining \textstyle on input line 97.
 LaTeX Info: Redefining \scriptstyle on input line 99.
 LaTeX Info: Redefining \scriptscriptstyle on input line 101.
 LaTeX Info: Redefining \genfrac on input line 149.
-)) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count345
 \calc@Bcount=\count346
@@ -837,8 +929,9 @@ LaTeX Info: Redefining \addtolength on input line 81.
 (/usr/share/texlive/texmf-dist/tex/latex/catchfilebetweentags/catchfilebetweent
 ags.sty
 Package: catchfilebetweentags 2011/02/19 v1.1 - Catch file between tags (FC)
-(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
+
 
 Package etex Warning: Extended allocation already in use.
 (etex)                etex.sty code will not be used.
@@ -848,12 +941,15 @@ Package etex Warning: Extended allocation already in use.
 
 ) (/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
 (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 ))
 \CatchFBT@tok=\toks51
-) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen347
@@ -867,7 +963,8 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \everycr=\toks53
 \minrowclearance=\skip83
 \rownum=\count363
-) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
 \csq@reset=\count364
 \csq@gtype=\count365
@@ -876,15 +973,19 @@ Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
 \csq@maxlvl=\count368
 \csq@tshold=\count369
 \csq@ltx@everypar=\toks54
+
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
+
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-)) (/usr/share/texlive/texmf-dist/tex/latex/epigraph/epigraph.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/epigraph/epigraph.sty
 Package: epigraph 2020/01/02 v1.5e typesetting epigraphs
+
 (/usr/share/texlive/texmf-dist/tex/latex/nextpage/nextpage.sty
 Package: nextpage 2009/09/03 v1.1a additional page commands
 )
@@ -892,7 +993,8 @@ Package: nextpage 2009/09/03 v1.1a additional page commands
 \afterepigraphskip=\skip85
 \epigraphwidth=\skip86
 \epigraphrule=\skip87
-) (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 \FV@CodeLineNo=\count370
 \FV@InFile=\read3
@@ -900,11 +1002,14 @@ Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 \c@FancyVerbLine=\count371
 \FV@StepNumber=\count372
 \FV@OutFile=\write5
-) (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesome.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesome.sty
 Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
+
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic
@@ -914,14 +1019,17 @@ tex)) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
 Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
 LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
 
+
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
 
+
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
-)) (/usr/share/texlive/texmf-dist/tex/latex/scalerel/scalerel.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/scalerel/scalerel.sty
 Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretchi
 ng of objects, relative to a reference object or in absolute terms
 \thesrwidth=\skip88
@@ -931,8 +1039,10 @@ ng of objects, relative to a reference object or in absolute terms
 \mnxsrwidth=\skip92
 \LMex=\skip93
 \LMpt=\skip94
-) (/usr/share/texlive/texmf-dist/tex/generic/soul/soul.sty
+)
+(/usr/share/texlive/texmf-dist/tex/generic/soul/soul.sty
 Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
+
 (/usr/share/texlive/texmf-dist/tex/generic/soul/soul-ori.sty
 Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@word=\toks55
@@ -955,7 +1065,8 @@ Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@ttwidth=\dimen355
 \SOUL@uldp=\dimen356
 \SOUL@ulht=\dimen357
-)) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
 \TX@col@width=\dimen358
 \TX@old@table=\dimen359
@@ -964,8 +1075,9 @@ Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
 \TX@delta=\dimen362
 \TX@cols=\count377
 \TX@ftn=\toks61
-) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/sha
-re/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
@@ -983,8 +1095,8 @@ Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/shar
-e/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen365
 \pgffor@skip=\dimen366
@@ -1028,14 +1140,18 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty (/usr/s
-hare/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
-) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2023-10-10 L3 Experimental document command parser
-) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2023-10-10 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen376
 \l__xtemplate_tmp_int=\count387
@@ -1060,7 +1176,7 @@ Package xtemplate Info: Declaring object type 'xfrac' taking 3 argument(s) on
 (/usr/share/texlive/texmf-dist/tex/latex/beamertheme-metropolis/beamerthememetr
 opolis.sty
 Package: beamerthememetropolis 2017/01/23 v1.2 Metropolis Beamer theme
-(/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks64
 \pgfopts@list@add@b@toks=\toks65
@@ -1090,11 +1206,13 @@ Package: beamercolorthememetropolis 2017/01/23 Metropolis color theme
 metropolis.sty
 Package: beamerfontthememetropolis 2017/01/23 Metropolis font theme
 
+
 Package beamerthememetropolis Warning: You need to compile with XeLaTeX or LuaL
 aTeX to use the Fira fonts on input line 95.
 
 )) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty)
 Package hyperref Info: Option `colorlinks' set `true' on input line 189.
+
 (/usr/share/texlive/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
 File: tikzlibrarytikzmark.code.tex 2022/08/24 v1.15 TikZ library for marking po
 sitions in a document
@@ -1115,6 +1233,7 @@ sitions in a document
 \lst@newlines=\count392
 \lst@lineno=\count393
 \lst@maxwidth=\dimen389
+
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 \lst@fmtcurrindent=\dimen390
@@ -1122,15 +1241,19 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 \c@lstnumber=\count395
 \lst@skipnumbers=\count396
 \lst@framebox=\box96
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2023/02/27 1.9 listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2023/02/27 1.9 listings language file
 ))
 
@@ -1176,6 +1299,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1225,6 +1349,7 @@ LaTeX Font Info:    ... okay on input line 8.
 \everyMPtoPDFconversion=\toks68
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
 (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 )
@@ -1234,11 +1359,13 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
+
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring ON on input line 8.
+
 (./citizenFrogs_1.out) (./citizenFrogs_1.out)
 \@outlinefile=\write6
 \openout6 = `citizenFrogs_1.out'.
@@ -1269,48 +1396,63 @@ ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@maskedRefs=\count403
-(/usr/share/texlive/texmf-dist/tex/latex/apacite/english.apc
+ (/usr/share/texlive/texmf-dist/tex/latex/apacite/english.apc
 File: english.apc 2013/07/21 v6.03 apacite language file
 LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
 \c@lstlisting=\count404
+
 (./citizenFrogs_1.nav)
+<figures/merlionFrog.png, id=41, 1027.84pt x 1027.84pt>
+File: figures/merlionFrog.png Graphic file (type png)
+<use figures/merlionFrog.png>
+Package pdftex.def Info: figures/merlionFrog.png  used on input line 10.
+(pdftex.def)             Requested size: 113.79987pt x 113.81102pt.
+
+Overfull \vbox (263.81125pt too high) detected at line 10
+ []
+
+
 Overfull \vbox (19.49039pt too high) detected at line 10
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/merlionFrog.png>
+]
 \openout4 = `citizenFrogs_1.vrb'.
 
-(./citizenFrogs_1.vrb
+ (./citizenFrogs_1.vrb
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
 ut line 4.
+
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
 Package epstopdf Info: Source file: <../analyses/figures/frogPond_0.eps>
-(epstopdf)                    date: 2025-10-23 15:51:18
-(epstopdf)                    size: 3605968 bytes
+(epstopdf)                    date: 2026-02-07 11:58:56
+(epstopdf)                    size: 3605963 bytes
 (epstopdf)             Output file: <../analyses/figures/frogPond_0-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2025-10-28 10:30:09
-(epstopdf)                    size: 727229 bytes
+(epstopdf)                    date: 2026-02-07 11:59:23
+(epstopdf)                    size: 727233 bytes
 (epstopdf)             Command: <epstopdf --outfile=../analyses/figures/frogPon
 d_0-eps-converted-to.pdf ../analyses/figures/frogPond_0.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/frogPond_0-eps-converted-to.pdf, id=30, 859.21pt x 452.691
+<../analyses/figures/frogPond_0-eps-converted-to.pdf, id=57, 859.21pt x 452.691
 25pt>
 File: ../analyses/figures/frogPond_0-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -1318,64 +1460,68 @@ f)
 Package pdftex.def Info: ../analyses/figures/frogPond_0-eps-converted-to.pdf  u
 sed on input line 7.
 (pdftex.def)             Requested size: 307.28987pt x 161.90497pt.
-) [2
+)
+[2
 
  <../analyses/figures/frogPond_0-eps-converted-to.pdf>]
 \openout4 = `citizenFrogs_1.vrb'.
 
-(./citizenFrogs_1.vrb
-Package epstopdf Info: Source file: <../analyses/figures/frogPondMale.eps>
-(epstopdf)                    date: 2025-10-28 11:15:07
-(epstopdf)                    size: 3589736 bytes
-(epstopdf)             Output file: <../analyses/figures/frogPondMale-eps-conve
-rted-to.pdf>
-(epstopdf)                    date: 2025-10-28 11:20:53
-(epstopdf)                    size: 719528 bytes
-(epstopdf)             Command: <epstopdf --outfile=../analyses/figures/frogPon
-dMale-eps-converted-to.pdf ../analyses/figures/frogPondMale.eps>
-(epstopdf)             \includegraphics on input line 8.
-Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/frogPondMale-eps-converted-to.pdf, id=47, 858.20625pt x 45
-2.69125pt>
-File: ../analyses/figures/frogPondMale-eps-converted-to.pdf Graphic file (type 
-pdf)
-<use ../analyses/figures/frogPondMale-eps-converted-to.pdf>
-Package pdftex.def Info: ../analyses/figures/frogPondMale-eps-converted-to.pdf 
- used on input line 8.
-(pdftex.def)             Requested size: 307.28987pt x 162.09146pt.
-) [3
-
- <../analyses/figures/frogPondMale-eps-converted-to.pdf>]
-\openout4 = `citizenFrogs_1.vrb'.
-
-(./citizenFrogs_1.vrb
+ (./citizenFrogs_1.vrb
 Package epstopdf Info: Source file: <../analyses/figures/frogPondZonderKikker.e
 ps>
-(epstopdf)                    date: 2025-10-28 11:15:05
-(epstopdf)                    size: 3554108 bytes
+(epstopdf)                    date: 2026-02-07 11:59:07
+(epstopdf)                    size: 3557114 bytes
 (epstopdf)             Output file: <../analyses/figures/frogPondZonderKikker-e
 ps-converted-to.pdf>
-(epstopdf)                    date: 2025-10-28 11:28:14
-(epstopdf)                    size: 697811 bytes
+(epstopdf)                    date: 2026-02-07 11:59:23
+(epstopdf)                    size: 699272 bytes
 (epstopdf)             Command: <epstopdf --outfile=../analyses/figures/frogPon
 dZonderKikker-eps-converted-to.pdf ../analyses/figures/frogPondZonderKikker.eps
 >
 (epstopdf)             \includegraphics on input line 8.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/frogPondZonderKikker-eps-converted-to.pdf, id=62, 858.2062
-5pt x 452.69125pt>
+<../analyses/figures/frogPondZonderKikker-eps-converted-to.pdf, id=74, 859.21pt
+ x 452.69125pt>
 File: ../analyses/figures/frogPondZonderKikker-eps-converted-to.pdf Graphic fil
 e (type pdf)
 <use ../analyses/figures/frogPondZonderKikker-eps-converted-to.pdf>
 Package pdftex.def Info: ../analyses/figures/frogPondZonderKikker-eps-converted
 -to.pdf  used on input line 8.
-(pdftex.def)             Requested size: 307.28987pt x 162.09146pt.
-) [4
+(pdftex.def)             Requested size: 307.28987pt x 161.90497pt.
+) [3
 
  <../analyses/figures/frogPondZonderKikker-eps-converted-to.pdf>]
 \openout4 = `citizenFrogs_1.vrb'.
 
+
 (./citizenFrogs_1.vrb
+Package epstopdf Info: Source file: <../analyses/figures/frogPondMale.eps>
+(epstopdf)                    date: 2026-02-07 11:59:15
+(epstopdf)                    size: 3592556 bytes
+(epstopdf)             Output file: <../analyses/figures/frogPondMale-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2026-02-07 11:59:24
+(epstopdf)                    size: 721857 bytes
+(epstopdf)             Command: <epstopdf --outfile=../analyses/figures/frogPon
+dMale-eps-converted-to.pdf ../analyses/figures/frogPondMale.eps>
+(epstopdf)             \includegraphics on input line 8.
+Package epstopdf Info: Output file is already uptodate.
+<../analyses/figures/frogPondMale-eps-converted-to.pdf, id=89, 859.21pt x 452.6
+9125pt>
+File: ../analyses/figures/frogPondMale-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use ../analyses/figures/frogPondMale-eps-converted-to.pdf>
+Package pdftex.def Info: ../analyses/figures/frogPondMale-eps-converted-to.pdf 
+ used on input line 8.
+(pdftex.def)             Requested size: 307.28987pt x 161.90497pt.
+) [4
+
+ <../analyses/figures/frogPondMale-eps-converted-to.pdf>] [5
+
+]
+\openout4 = `citizenFrogs_1.vrb'.
+
+ (./citizenFrogs_1.vrb
 Package epstopdf Info: Source file: <../analyses/figures/peopleByClip.eps>
 (epstopdf)                    date: 2025-11-04 22:17:03
 (epstopdf)                    size: 76193 bytes
@@ -1387,8 +1533,8 @@ rted-to.pdf>
 yClip-eps-converted-to.pdf ../analyses/figures/peopleByClip.eps>
 (epstopdf)             \includegraphics on input line 12.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/peopleByClip-eps-converted-to.pdf, id=77, 875.27pt x 473.7
-7pt>
+<../analyses/figures/peopleByClip-eps-converted-to.pdf, id=110, 875.27pt x 473.
+77pt>
 File: ../analyses/figures/peopleByClip-eps-converted-to.pdf Graphic file (type 
 pdf)
 <use ../analyses/figures/peopleByClip-eps-converted-to.pdf>
@@ -1396,13 +1542,14 @@ Package pdftex.def Info: ../analyses/figures/peopleByClip-eps-converted-to.pdf
  used on input line 12.
 (pdftex.def)             Requested size: 307.28987pt x 166.32802pt.
 )
-Overfull \vbox (25.07153pt too high) detected at line 57
+Overfull \vbox (25.07153pt too high) detected at line 59
  []
 
-[5
+[6
 
  <../analyses/figures/peopleByClip-eps-converted-to.pdf>]
 \openout4 = `citizenFrogs_1.vrb'.
+
 
 (./citizenFrogs_1.vrb
 Package epstopdf Info: Source file: <../analyses/figures/voteCrowd.eps>
@@ -1416,32 +1563,32 @@ d-to.pdf>
 wd-eps-converted-to.pdf ../analyses/figures/voteCrowd.eps>
 (epstopdf)             \includegraphics on input line 9.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/voteCrowd-eps-converted-to.pdf, id=90, 874.26625pt x 338.2
-6375pt>
+<../analyses/figures/voteCrowd-eps-converted-to.pdf, id=123, 874.26625pt x 338.
+26375pt>
 File: ../analyses/figures/voteCrowd-eps-converted-to.pdf Graphic file (type pdf
 )
 <use ../analyses/figures/voteCrowd-eps-converted-to.pdf>
 Package pdftex.def Info: ../analyses/figures/voteCrowd-eps-converted-to.pdf  us
 ed on input line 9.
 (pdftex.def)             Requested size: 307.28987pt x 118.89474pt.
-) [6
+) [7
 
  <../analyses/figures/voteCrowd-eps-converted-to.pdf>]
 \openout4 = `citizenFrogs_1.vrb'.
 
 (./citizenFrogs_1.vrb
 Package epstopdf Info: Source file: <../analyses/figures/voteROCs.eps>
-(epstopdf)                    date: 2025-11-03 14:48:43
-(epstopdf)                    size: 583706 bytes
+(epstopdf)                    date: 2026-02-07 12:04:38
+(epstopdf)                    size: 582635 bytes
 (epstopdf)             Output file: <../analyses/figures/voteROCs-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2025-11-03 14:48:53
-(epstopdf)                    size: 164365 bytes
+(epstopdf)                    date: 2026-02-07 12:05:41
+(epstopdf)                    size: 164197 bytes
 (epstopdf)             Command: <epstopdf --outfile=../analyses/figures/voteROC
 s-eps-converted-to.pdf ../analyses/figures/voteROCs.eps>
 (epstopdf)             \includegraphics on input line 11.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/voteROCs-eps-converted-to.pdf, id=103, 740.7675pt x 423.58
+<../analyses/figures/voteROCs-eps-converted-to.pdf, id=137, 740.7675pt x 423.58
 25pt>
 File: ../analyses/figures/voteROCs-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1450,82 +1597,135 @@ Package pdftex.def Info: ../analyses/figures/voteROCs-eps-converted-to.pdf  use
 d on input line 11.
 (pdftex.def)             Requested size: 307.28987pt x 175.71236pt.
 )
-Overfull \vbox (24.45586pt too high) detected at line 84
+Overfull \vbox (24.45586pt too high) detected at line 86
  []
 
-[7
+[8
 
- <../analyses/figures/voteROCs-eps-converted-to.pdf>]
+ <../analyses/figures/voteROCs-eps-converted-to.pdf>] [9
+
+]
 \openout4 = `citizenFrogs_1.vrb'.
+
 
 (./citizenFrogs_1.vrb
 Package epstopdf Info: Source file: <../analyses/figures/frogPond.eps>
-(epstopdf)                    date: 2025-10-23 15:51:20
-(epstopdf)                    size: 3620459 bytes
+(epstopdf)                    date: 2026-02-07 11:58:57
+(epstopdf)                    size: 3620454 bytes
 (epstopdf)             Output file: <../analyses/figures/frogPond-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2025-10-28 10:30:10
-(epstopdf)                    size: 737184 bytes
+(epstopdf)                    date: 2026-02-07 11:59:25
+(epstopdf)                    size: 737190 bytes
 (epstopdf)             Command: <epstopdf --outfile=../analyses/figures/frogPon
 d-eps-converted-to.pdf ../analyses/figures/frogPond.eps>
-(epstopdf)             \includegraphics on input line 11.
+(epstopdf)             \includegraphics on input line 12.
 Package epstopdf Info: Output file is already uptodate.
-<../analyses/figures/frogPond-eps-converted-to.pdf, id=131, 859.21pt x 452.6912
+<../analyses/figures/frogPond-eps-converted-to.pdf, id=171, 859.21pt x 452.6912
 5pt>
 File: ../analyses/figures/frogPond-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../analyses/figures/frogPond-eps-converted-to.pdf>
 Package pdftex.def Info: ../analyses/figures/frogPond-eps-converted-to.pdf  use
-d on input line 11.
+d on input line 12.
 (pdftex.def)             Requested size: 307.28987pt x 161.90497pt.
 )
-Overfull \vbox (18.89848pt too high) detected at line 98
+Overfull \vbox (19.39848pt too high) detected at line 103
  []
 
-[8
+[10
 
  <../analyses/figures/frogPond-eps-converted-to.pdf>]
 \openout4 = `citizenFrogs_1.vrb'.
 
-(./citizenFrogs_1.vrb) [9
+ (./citizenFrogs_1.vrb) [11
 
 ]
 \openout4 = `citizenFrogs_1.vrb'.
 
-(./citizenFrogs_1.vrb
+ (./citizenFrogs_1.vrb
+Package epstopdf Info: Source file: </home/mdlee/Dropbox/CC2/content/figures/gr
+aphicalModels/citizenFrogs.eps>
+(epstopdf)                    date: 2026-02-07 14:23:45
+(epstopdf)                    size: 112608 bytes
+(epstopdf)             Output file: </home/mdlee/Dropbox/CC2/content/figures/gr
+aphicalModels/citizenFrogs-eps-converted-to.pdf>
+(epstopdf)                    date: 2026-02-07 14:23:50
+(epstopdf)                    size: 8906 bytes
+(epstopdf)             Command: <epstopdf --outfile=/home/mdlee/Dropbox/CC2/con
+tent/figures/graphicalModels/citizenFrogs-eps-converted-to.pdf /home/mdlee/Drop
+box/CC2/content/figures/graphicalModels/citizenFrogs.eps>
+(epstopdf)             \includegraphics on input line 4.
+Package epstopdf Info: Output file is already uptodate.
+</home/mdlee/Dropbox/CC2/content/figures/graphicalModels/citizenFrogs-eps-conve
+rted-to.pdf, id=201, 511.9125pt x 130.4875pt>
+File: /home/mdlee/Dropbox/CC2/content/figures/graphicalModels/citizenFrogs-eps-
+converted-to.pdf Graphic file (type pdf)
+<use /home/mdlee/Dropbox/CC2/content/figures/graphicalModels/citizenFrogs-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: /home/mdlee/Dropbox/CC2/content/figures/graphicalModel
+s/citizenFrogs-eps-converted-to.pdf  used on input line 4.
+(pdftex.def)             Requested size: 261.19826pt x 66.57959pt.
+Package epstopdf Info: Source file: <../analyses/figures/frogPond.eps>
+(epstopdf)                    date: 2026-02-07 11:58:57
+(epstopdf)                    size: 3620454 bytes
+(epstopdf)             Output file: <../analyses/figures/frogPond-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2026-02-07 11:59:25
+(epstopdf)                    size: 737190 bytes
+(epstopdf)             Command: <epstopdf --outfile=../analyses/figures/frogPon
+d-eps-converted-to.pdf ../analyses/figures/frogPond.eps>
+(epstopdf)             \includegraphics on input line 6.
+Package epstopdf Info: Output file is already uptodate.
+File: ../analyses/figures/frogPond-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ../analyses/figures/frogPond-eps-converted-to.pdf>
+Package pdftex.def Info: ../analyses/figures/frogPond-eps-converted-to.pdf  use
+d on input line 6.
+(pdftex.def)             Requested size: 307.28987pt x 161.90497pt.
+)
+Overfull \vbox (30.37834pt too high) detected at line 133
+ []
+
+[12
+
+ </home/mdlee/Dropbox/CC2/content/figures/graphicalModels/citizenFrogs-eps-conv
+erted-to.pdf>]
+\openout4 = `citizenFrogs_1.vrb'.
+
+ (./citizenFrogs_1.vrb
 Package epstopdf Info: Source file: <../models/figures/jags_oneHighThresholdNoD
 ifferences_n_citizenFrogsAll_ROCs.eps>
-(epstopdf)                    date: 2025-11-03 14:47:16
-(epstopdf)                    size: 701230 bytes
+(epstopdf)                    date: 2026-02-07 13:38:45
+(epstopdf)                    size: 698636 bytes
 (epstopdf)             Output file: <../models/figures/jags_oneHighThresholdNoD
 ifferences_n_citizenFrogsAll_ROCs-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-11-03 14:47:29
-(epstopdf)                    size: 180618 bytes
+(epstopdf)                    date: 2026-02-07 13:38:48
+(epstopdf)                    size: 180676 bytes
 (epstopdf)             Command: <epstopdf --outfile=../models/figures/jags_oneH
 ighThresholdNoDifferences_n_citizenFrogsAll_ROCs-eps-converted-to.pdf ../models
 /figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_ROCs.eps>
-(epstopdf)             \includegraphics on input line 10.
+(epstopdf)             \includegraphics on input line 8.
 Package epstopdf Info: Output file is already uptodate.
 <../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_ROCs-ep
-s-converted-to.pdf, id=162, 740.7675pt x 423.5825pt>
+s-converted-to.pdf, id=226, 770.88pt x 423.5825pt>
 File: ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_RO
 Cs-eps-converted-to.pdf Graphic file (type pdf)
 <use ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_ROC
 s-eps-converted-to.pdf>
 Package pdftex.def Info: ../models/figures/jags_oneHighThresholdNoDifferences_n
-_citizenFrogsAll_ROCs-eps-converted-to.pdf  used on input line 10.
-(pdftex.def)             Requested size: 307.28987pt x 175.71236pt.
+_citizenFrogsAll_ROCs-eps-converted-to.pdf  used on input line 8.
+(pdftex.def)             Requested size: 307.28987pt x 168.8483pt.
 )
-Overfull \vbox (21.80594pt too high) detected at line 133
+Overfull \vbox (10.28639pt too high) detected at line 146
  []
 
-[10
+[13
 
  <../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_ROCs-e
 ps-converted-to.pdf>]
 \openout4 = `citizenFrogs_1.vrb'.
 
-(./citizenFrogs_1.vrb
+ (./citizenFrogs_1.vrb
 Package epstopdf Info: Source file: <../models/figures/jags_oneHighThresholdNoD
 ifferences_n_citizenFrogsAll_parameters.eps>
 (epstopdf)                    date: 2025-10-28 10:49:18
@@ -1541,7 +1741,7 @@ eps>
 (epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
 <../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_paramet
-ers-eps-converted-to.pdf, id=185, 874.26625pt x 473.77pt>
+ers-eps-converted-to.pdf, id=250, 874.26625pt x 473.77pt>
 File: ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_pa
 rameters-eps-converted-to.pdf Graphic file (type pdf)
 <use ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_par
@@ -1550,14 +1750,48 @@ Package pdftex.def Info: ../models/figures/jags_oneHighThresholdNoDifferences_n
 _citizenFrogsAll_parameters-eps-converted-to.pdf  used on input line 10.
 (pdftex.def)             Requested size: 307.28987pt x 166.52321pt.
 )
-Overfull \vbox (25.26672pt too high) detected at line 146
+Overfull \vbox (25.26672pt too high) detected at line 159
  []
 
-[11
+[14
 
  <../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_parame
-ters-eps-converted-to.pdf>]
+ters-eps-converted-to.pdf>] [15
+
+]
 \openout4 = `citizenFrogs_1.vrb'.
+
+ (./citizenFrogs_1.vrb
+Package epstopdf Info: Source file: <../analyses/figures/threeModels.eps>
+(epstopdf)                    date: 2026-02-07 15:20:35
+(epstopdf)                    size: 87326 bytes
+(epstopdf)             Output file: <../analyses/figures/threeModels-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2026-02-07 15:20:43
+(epstopdf)                    size: 93087 bytes
+(epstopdf)             Command: <epstopdf --outfile=../analyses/figures/threeMo
+dels-eps-converted-to.pdf ../analyses/figures/threeModels.eps>
+(epstopdf)             \includegraphics on input line 14.
+Package epstopdf Info: Output file is already uptodate.
+<../analyses/figures/threeModels-eps-converted-to.pdf, id=269, 1164.35pt x 564.
+1075pt>
+File: ../analyses/figures/threeModels-eps-converted-to.pdf Graphic file (type p
+df)
+<use ../analyses/figures/threeModels-eps-converted-to.pdf>
+Package pdftex.def Info: ../analyses/figures/threeModels-eps-converted-to.pdf  
+used on input line 14.
+(pdftex.def)             Requested size: 307.28987pt x 126.34927pt.
+)
+Overfull \vbox (10.39265pt too high) detected at line 178
+ []
+
+[16
+
+ <../analyses/figures/threeModels-eps-converted-to.pdf>] [17
+
+]
+\openout4 = `citizenFrogs_1.vrb'.
+
 
 (./citizenFrogs_1.vrb
 Package epstopdf Info: Source file: <../models/figures/jags_oneHighThresholdNoD
@@ -1575,7 +1809,7 @@ vironmentDynamics.eps>
 (epstopdf)             \includegraphics on input line 11.
 Package epstopdf Info: Output file is already uptodate.
 <../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_environ
-mentDynamics-eps-converted-to.pdf, id=200, 874.26625pt x 338.26375pt>
+mentDynamics-eps-converted-to.pdf, id=290, 874.26625pt x 338.26375pt>
 File: ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_en
 vironmentDynamics-eps-converted-to.pdf Graphic file (type pdf)
 <use ../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_env
@@ -1584,11 +1818,12 @@ Package pdftex.def Info: ../models/figures/jags_oneHighThresholdNoDifferences_n
 _citizenFrogsAll_environmentDynamics-eps-converted-to.pdf  used on input line 1
 1.
 (pdftex.def)             Requested size: 307.28987pt x 118.89474pt.
-) [12
+) [18
 
  <../models/figures/jags_oneHighThresholdNoDifferences_n_citizenFrogsAll_enviro
 nmentDynamics-eps-converted-to.pdf>]
 \openout4 = `citizenFrogs_1.vrb'.
+
 
 (./citizenFrogs_1.vrb
 Package epstopdf Info: Source file: <../models/figures/jags_oneHighThresholdNoD
@@ -1606,7 +1841,7 @@ tizenFrogsAll_environmentDynamics.eps>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
 <../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrogsAll
-_environmentDynamics-eps-converted-to.pdf, id=214, 874.26625pt x 338.26375pt>
+_environmentDynamics-eps-converted-to.pdf, id=303, 874.26625pt x 338.26375pt>
 File: ../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFro
 gsAll_environmentDynamics-eps-converted-to.pdf Graphic file (type pdf)
 <use ../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrog
@@ -1616,71 +1851,85 @@ namics_n_citizenFrogsAll_environmentDynamics-eps-converted-to.pdf  used on inpu
 t line 15.
 (pdftex.def)             Requested size: 307.28987pt x 118.89474pt.
 )
-Overfull \vbox (21.93819pt too high) detected at line 180
+Overfull \vbox (21.93819pt too high) detected at line 212
  []
 
-[13
+[19
 
  <../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrogsAl
 l_environmentDynamics-eps-converted-to.pdf>]
 \openout4 = `citizenFrogs_1.vrb'.
 
-(./citizenFrogs_1.vrb
+ (./citizenFrogs_1.vrb
 Package epstopdf Info: Source file: <../models/figures/jags_oneHighThresholdNoD
 ifferencesDynamics_n_citizenFrogsAll_ROCs.eps>
-(epstopdf)                    date: 2025-11-03 14:50:05
-(epstopdf)                    size: 701320 bytes
+(epstopdf)                    date: 2026-02-07 13:38:41
+(epstopdf)                    size: 814009 bytes
 (epstopdf)             Output file: <../models/figures/jags_oneHighThresholdNoD
 ifferencesDynamics_n_citizenFrogsAll_ROCs-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-11-03 14:50:11
-(epstopdf)                    size: 174293 bytes
+(epstopdf)                    date: 2026-02-07 13:38:48
+(epstopdf)                    size: 188271 bytes
 (epstopdf)             Command: <epstopdf --outfile=../models/figures/jags_oneH
 ighThresholdNoDifferencesDynamics_n_citizenFrogsAll_ROCs-eps-converted-to.pdf .
 ./models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrogsAll_R
 OCs.eps>
-(epstopdf)             \includegraphics on input line 4.
+(epstopdf)             \includegraphics on input line 9.
 Package epstopdf Info: Output file is already uptodate.
 <../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrogsAll
-_ROCs-eps-converted-to.pdf, id=230, 740.7675pt x 423.5825pt>
+_ROCs-eps-converted-to.pdf, id=319, 770.88pt x 423.5825pt>
 File: ../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFro
 gsAll_ROCs-eps-converted-to.pdf Graphic file (type pdf)
 <use ../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrog
 sAll_ROCs-eps-converted-to.pdf>
 Package pdftex.def Info: ../models/figures/jags_oneHighThresholdNoDifferencesDy
-namics_n_citizenFrogsAll_ROCs-eps-converted-to.pdf  used on input line 4.
-(pdftex.def)             Requested size: 307.28987pt x 175.71236pt.
-) [14
+namics_n_citizenFrogsAll_ROCs-eps-converted-to.pdf  used on input line 9.
+(pdftex.def)             Requested size: 307.28987pt x 168.8483pt.
+)
+Overfull \vbox (5.28638pt too high) detected at line 224
+ []
+
+[20
 
  <../models/figures/jags_oneHighThresholdNoDifferencesDynamics_n_citizenFrogsAl
-l_ROCs-eps-converted-to.pdf>] (./citizenFrogs_1.bbl) [15
+l_ROCs-eps-converted-to.pdf>] [21
 
 ]
 \openout4 = `citizenFrogs_1.vrb'.
 
-(./citizenFrogs_1.vrb
-<../analyses/figures/brownModel.png, id=260, 714.67pt x 473.77pt>
+ (./citizenFrogs_1.vrb) [22
+
+] [23
+
+]
+(./citizenFrogs_1.bbl) [24
+
+]
+\openout4 = `citizenFrogs_1.vrb'.
+
+ (./citizenFrogs_1.vrb
+<../analyses/figures/brownModel.png, id=370, 714.67pt x 473.77pt>
 File: ../analyses/figures/brownModel.png Graphic file (type png)
 <use ../analyses/figures/brownModel.png>
 Package pdftex.def Info: ../analyses/figures/brownModel.png  used on input line
  4.
 (pdftex.def)             Requested size: 307.28987pt x 203.7099pt.
 )
-Overfull \vbox (19.65361pt too high) detected at line 201
+Overfull \vbox (19.65361pt too high) detected at line 258
  []
 
-[16
+[25
 
  <../analyses/figures/brownModel.png>]
 \openout4 = `citizenFrogs_1.vrb'.
 
-(./citizenFrogs_1.vrb
-<../analyses/figures/brownResults.png, id=272, 975.645pt x 567.11874pt>
+ (./citizenFrogs_1.vrb
+<../analyses/figures/brownResults.png, id=382, 975.645pt x 567.11874pt>
 File: ../analyses/figures/brownResults.png Graphic file (type png)
 <use ../analyses/figures/brownResults.png>
 Package pdftex.def Info: ../analyses/figures/brownResults.png  used on input li
 ne 4.
 (pdftex.def)             Requested size: 307.28987pt x 178.61739pt.
-) [17
+) [26
 
  <../analyses/figures/brownResults.png>]
 \tf@nav=\write7
@@ -1692,38 +1941,40 @@ ne 4.
 \tf@snm=\write9
 \openout9 = `citizenFrogs_1.snm'.
 
-(./citizenFrogs_1.aux)
+ (./citizenFrogs_1.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `citizenFrogs_1.out' has not changed.
-(rerunfilecheck)             Checksum: AEA4B6A8AE45636C75679C2F0DFA4493;93.
+(rerunfilecheck)             Checksum: 7DD8D853A5C1319819D4FAE2A5174FF0;923.
  ) 
 Here is how much of TeX's memory you used:
- 33642 strings out of 474222
- 655432 string characters out of 5748734
+ 33777 strings out of 474222
+ 658695 string characters out of 5748734
  1936975 words of memory out of 5000000
- 55091 multiletter control sequences out of 15000+600000
+ 55195 multiletter control sequences out of 15000+600000
  578318 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,1918b,908s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb>
-Output written on citizenFrogs_1.pdf (17 pages, 4038782 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+s9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on citizenFrogs_1.pdf (26 pages, 6644556 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
- 38 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 463 PDF objects out of 1000 (max. 8388607)
+ 294 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 286 words of extra memory for PDF output out of 10000 (max. 10000000)
 

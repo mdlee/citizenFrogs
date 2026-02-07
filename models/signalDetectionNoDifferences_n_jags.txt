@@ -1,6 +1,6 @@
 # citizen frogs
 # signal detection, many frogs
-# dprime as person property
+# dprime and bias as person property
 model{
   for (t in 1:nTrials){
     yHat[t, 1] = 1 - phi(d[person[t]]/2 + c[person[t]] )
