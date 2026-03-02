@@ -3,7 +3,7 @@
 \beamer@sectionintoc {3}{Which Cognitive Model?}{15}{0}{3}
 \beamer@sectionintoc {4}{Modeling the Environment}{17}{0}{4}
 \beamer@sectionintoc {5}{Discussion}{21}{0}{5}
-\beamer@sectionintoc {6}{Thanks!}{23}{0}{6}
-\contentsline {section}{References}{24}{}%
-\beamer@sectionintoc {8}{\shortciteA {brown2024cognitive} Model and Results}{25}{0}{7}
-\beamer@sectionintoc {9}{Performance of Other Cognitive Models}{28}{0}{8}
+\beamer@sectionintoc {6}{Thanks! \\ \url {https://github.com/mdlee/citizenFrogs}}{24}{0}{6}
+\contentsline {section}{References}{25}{}%
+\beamer@sectionintoc {8}{\shortciteA {brown2024cognitive} Model and Results}{27}{0}{7}
+\beamer@sectionintoc {9}{Performance of Other Cognitive Models}{30}{0}{8}

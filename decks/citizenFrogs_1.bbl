@@ -57,6 +57,62 @@ Lee, M\BPBI D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Vanpaemel%
+}{%
+Vanpaemel%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+Vanpaemel2020}
+\APACinsertmetastar {%
+Vanpaemel2020}%
+\begin{APACrefauthors}%
+Vanpaemel, W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Strong theory testing using the prior predictive and the
+  data prior.} {Strong theory testing using the prior predictive and the data
+  prior.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological Review}{127}{1}{136--145}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/rev0000167} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Villarreal%
+, Etz%
+\BCBL {}\ \BBA {} Lee%
+}{%
+Villarreal%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2023}}%
+}]{%
+Villarreal2023}
+\APACinsertmetastar {%
+Villarreal2023}%
+\begin{APACrefauthors}%
+Villarreal, M.%
+, Etz, A.%
+\BCBL {}\ \BBA {} Lee, M\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Evaluating the complexity and falsifiability of
+  psychological models} {Evaluating the complexity and falsifiability of
+  psychological models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological Review}{130}{4}{853--872}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/rev0000421} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Whitney%
 , Sweeny%
 \BCBL {}\ \BBA {} Corbett%

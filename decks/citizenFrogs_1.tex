@@ -46,7 +46,7 @@
 \begin{frame}[fragile]{Data}
 \vspace{-1em}
 \bi
-\i The joint and marginal distributions of people judging clips shows
+\i There are $44,180$ behavioral judgments from $2848$ people over $1260$ clips for $7$ types of frog
 \bi 
 \j lots of people judge few clips, but a few people judge many
 \j the data collection system aims to have five judgments for each type of frog in each clip
@@ -224,13 +224,33 @@ y_{ijf} & \sim & \operatorname{Bernoulli}\bigl(\theta_{ijf}\bigr)\nonumber
 
 \section{Discussion}
 
+\begin{frame}[fragile]{(Don't) Count Parameters}
+\vspace{-1em}
+\bi
+\i There are $44,180$ behavioral judgments from $2848$ people over $1260$ clips for $7$ types of frog
+\bi 
+\j the original model had $2848\times 2 + 1260\times 7 + 7=14,523$ parameters
+\ei 
+\i The model is highly constrained by the functional form, so these parameters can make reasonable predictions about
+\bi
+\j the presence or absence of frogs
+\j people's detection abilities and guessing strategies
+\ei
+\i Adding environmental dynamics added $7$ parameters and made the model \emph{much simpler} 
+\bi
+\j inference about the frogs improved as a results of the stronger theory and inductive bias \cite{Vanpaemel2020}
+\j actually, the more complicated original model is basically \emph{nested within (a special case of)} the simpler model with environmental dynamics \cite{Villarreal2023}
+\ei
+\ei 
+\end{frame}
+
 \begin{frame}[fragile]{Considering Environmental Structure}
 \vspace{-1em}
 \bi
 \i It is easy as a cognitive modeler to focus too hard on internal cognitive processes
 \i The dynamics of the environment also influence observed behavior, and should be part of a complete model of the data-generating process
 \vspace{1em}
-\i Focusing on environmental regularities for this frog task could lead to improvement in
+\i More focus on environmental regularities for this frog task could lead to improvement in
 \bi
 \j \emph{model development}: more complicated environmental models are possible
 \bi 
@@ -241,7 +261,7 @@ y_{ijf} & \sim & \operatorname{Bernoulli}\bigl(\theta_{ijf}\bigr)\nonumber
 \ei 
 \end{frame}
 
-\section{Thanks!}
+\section{Thanks! \\ \url{https://github.com/mdlee/citizenFrogs}}
 
 \begin{frame}[allowframebreaks]{References}
 \bibliographystyle{apacite}{}{}

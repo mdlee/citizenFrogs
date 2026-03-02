@@ -39,6 +39,7 @@ addpath(generalDir);
 for dataIdx = 1:numel(dataList)
   dataName = dataList{dataIdx};
   load([dataDir dataName], 'd');
+  return
 
   keep = find(d.stimulusLong <= trialsKeep);
   d.nTrials = length(keep);
