@@ -1,5 +1,7 @@
 %% One high threshold model for citizen frog aggregation
 % no differences assumes each person's alpha and beta applies to all frogs
+% asymmetric dynamics allows for different base rates with different
+% arriving and leaving probabilities
 
 clear; close all;
 
@@ -23,9 +25,9 @@ trialsKeep = 1260; % 1260 is full
 engine = 'jags';
 params = {'alpha', 'beta', 'tau', 'gamma'};
 
-nChains    = 8;     % number of MCMC chains
+nChains    = 6;     % number of MCMC chains
 nBurnin    = 1e2;   % number of discarded burn-in samples
-nSamples   = 2e3;   % number of collected samples
+nSamples   = 1e2;   % number of collected samples
 nThin      = 1;     % number of samples between those collected
 doParallel = 1;     % whether MATLAB parallel toolbox parallizes chains
 
@@ -39,7 +41,7 @@ addpath(generalDir);
 for dataIdx = 1:numel(dataList)
   dataName = dataList{dataIdx};
   load([dataDir dataName], 'd');
-  return
+
 
   keep = find(d.stimulusLong <= trialsKeep);
   d.nTrials = length(keep);
@@ -47,7 +49,7 @@ for dataIdx = 1:numel(dataList)
   d.stimulusLong = d.stimulusLong(keep);
   d.yLong = d.yLong(keep);
 
-  modelName = 'oneHighThresholdNoDifferencesDynamics_n';
+  modelName = 'oneHighThresholdNoDifferences_n';
   data = struct(...
     'nStimuli'    , d.nStimuli       , ...
     'nPeople'     , d.nPeople        , ...

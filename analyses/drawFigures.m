@@ -6,20 +6,22 @@ close all;
 printFigures = true;
 
 analysisList = {...
-   % 'voteProportion'; ...
-  %  'voteMajority'; ...
-   %'voteROCs'; ...
+  %  'voteProportion'; ...
+    'voteMajority'; ...
+  % 'voteROCs'; ...
    % 'frogPond'; ...
    % 'frogPondZonderKikker'; ...
    % 'frogPondMale'; ...
    %'peopleByClipByFrog'; ...
    %'peopleByClip'; ...
-   'threeModels'; ...
+   %'threeModels'; ...
+  % 'covarianceStructure'; ...
    };
 
 % load data
 dataDir = '../data/';
-dataName = 'citizenFrogsAll';
+dataName = 'citizenFrogsAll'; srtFrg = [1 6 5 2 3 4 7];
+dataName = 'citizenFrogsSecondDataSet'; srtFrg = 1:9;
 load([dataDir dataName], 'd');
 
 % constants
@@ -34,11 +36,11 @@ for analysisIdx = 1:numel(analysisList)
    switch analysisName
       case 'voteProportion'
          vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
-         drawEnvironmentDynamics(d, vote', pantone);
+         drawEnvironmentDynamics(d, vote', srtFrg, pantone);
 
       case 'voteMajority'
          vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
-         drawEnvironmentDynamics(d, double(vote' >= 0.5), pantone);
+         drawEnvironmentDynamics(d, double(vote' >= 0.5), srtFrg, pantone);
 
       case 'voteROCs'
          vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
@@ -668,11 +670,29 @@ for analysisIdx = 1:numel(analysisList)
             T(3) = text(-20, yVal, 'One high threshold');
             set(T, 'fontsize', 20, 'fontweight', 'bold');
 
+      case 'covarianceStructure'
+
+         printFigures = false;
+
+         c = cov(d.truth');
+
+         imagesc(c);          % Displays image with scaled colors
+         colorbar;            % Adds a color scale guide
+         title('Covariance Matrix');
+         xlabel('Variables');
+         ylabel('Variables');
+         axis square;         % Makes the plot square
+         set(gca, ...
+            'xtick', 1:d.nFrogs, ...
+            'xticklabel', d.frogs, ...
+             'ytick', 1:d.nFrogs, ...
+            'yticklabel', d.frogs);
+
 
    end
 
    % print
-   if printFigures & ~isempty(get(groot, 'CurrentFigure'))
+   if printFigures 
       if ~isfolder('figures')
          !mkdir figures
       end

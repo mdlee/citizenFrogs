@@ -1,10 +1,10 @@
-function  drawEnvironmentDynamics(d, tau, pantone)
+function  drawEnvironmentDynamics(d, tau, srtFrg, pantone)
 %DRAWENVIRONMENTDYNAMICS Draw inferences about the environment dynamics
 
 fontSize = 18;
 scaleW = 1*1/d.nStimuli;
 scaleH = 5*1/d.nFrogs;
-srtFrg = [1 6 5 2 3 4 7];
+%srtFrg = [1 6 5 2 3 4 7];
 
 F = figure; clf; hold on;
 setFigure(F, [0.2 0.2 0.6 0.35], '');
