@@ -10,7 +10,7 @@ printFigures = true;
 
 dataDir = ('../data/');
 dataList = {...
-   % 'citizenFrogsAll'; ...
+    'citizenFrogsAll'; ...
    'citizenFrogsSecondDataSet'; ...
    };
 
@@ -20,11 +20,9 @@ figureList = { ...
    'environmentDynamics'; ...
    };
 
-stimuliKeep = 481; % 1260 is full for data set 1, 481 for dataset 2
-
 % MCMC properties
 engine = 'jags';
-params = {'alpha', 'beta', 'tau', 'gammaArrive', 'gammaLeave'};
+params = {'alpha', 'beta', 'tau', 'gammaArrive', 'gammaLeave', 'phi'};
 
 nChains    = 8;     % number of MCMC chains
 nBurnin    = 2e3;   % number of discarded burn-in samples
@@ -64,8 +62,6 @@ for dataIdx = 1:numel(dataList)
          legLoc = 9;
          figSize = [0.15 0.2 0.575 0.6];
          slideLeft = 0.075;
-
-
    end
 
    keep = find(d.stimulusLong <= stimuliKeep);

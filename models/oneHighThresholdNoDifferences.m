@@ -8,7 +8,7 @@ printFigures = true;
 
 dataDir = ('../data/');
 dataList = {...
- % 'citizenFrogsAll'; ...
+'citizenFrogsAll'; ...
     'citizenFrogsSecondDataSet'; ...
   };
 
@@ -20,14 +20,13 @@ figureList = { ...
 
 % MCMC properties
 engine = 'jags';
-params = {'alpha', 'beta', 'tau'};
+params = {'alpha', 'beta', 'tau', 'phi'};
 
 nChains    = 8;     % number of MCMC chains
 nBurnin    = 2e3;   % number of discarded burn-in samples
 nSamples   = 2e3;   % number of collected samples
 nThin      = 10;     % number of samples between those collected
 doParallel = 1;     % whether MATLAB parallel toolbox parallizes chains
-
 
 %% Constants
 load pantoneColors pantone;

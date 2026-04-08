@@ -1,0 +1,11 @@
+% runModels
+
+oneHighThresholdNoDifferences
+oneHighThresholdNoDifferencesAsymmetricDynamics
+oneHighThresholdNoDifferencesAsymmetricDynamicsCovariance
+
+twoHighThresholdNoDifferences
+twoHighThresholdNoDifferencesAsymmetricDynamics
+
+signalDetectionNoDifferences
+signalDetectionNoDifferencesAsymmetricDynamics

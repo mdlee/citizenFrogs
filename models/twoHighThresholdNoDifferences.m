@@ -1,4 +1,4 @@
-%% One high threshold model for citizen frog aggregation
+%% Two high threshold model for citizen frog aggregation
 % no differences assumes each person's alpha and beta applies to all frogs
 
 clear; close all;
@@ -8,27 +8,25 @@ printFigures = true;
 
 dataDir = ('../data/');
 dataList = {...
-   'citizenFrogsAll'; ...
-   };
-
-figureList = { ...
-%'parameters'; ...
- 'ROCs'; ...
-% 'environmentDynamics'; ...
+ 'citizenFrogsAll'; ...
+    'citizenFrogsSecondDataSet'; ...
   };
 
-trialsKeep = 1260; % 1260 is full
+figureList = { ...
+'parameters'; ...
+ 'ROCs'; ...
+ 'environmentDynamics'; ...
+  };
 
 % MCMC properties
 engine = 'jags';
 params = {'alpha', 'beta', 'tau', 'phi'};
 
 nChains    = 8;     % number of MCMC chains
-nBurnin    = 1e3;   % number of discarded burn-in samples
-nSamples   = 1e3;   % number of collected samples
-nThin      = 1;     % number of samples between those collected
+nBurnin    = 2e3;   % number of discarded burn-in samples
+nSamples   = 2e3;   % number of collected samples
+nThin      = 10;     % number of samples between those collected
 doParallel = 1;     % whether MATLAB parallel toolbox parallizes chains
-
 
 %% Constants
 load pantoneColors pantone;
@@ -39,6 +37,24 @@ addpath(generalDir);
 for dataIdx = 1:numel(dataList)
    dataName = dataList{dataIdx};
    load([dataDir dataName], 'd');
+
+   switch dataName
+      case 'citizenFrogsAll'
+         stimuliKeep = 1260; % 1260 is full for data set 1, 481 for dataset 2
+         srtFrg = [1 6 5 2 3 4 7];
+         spLoc = [1 5 6 7 3 2 8];
+         legLoc = 4;
+         figSize = [0.2 0.2 0.6 0.5];
+         slideLeft = 0;
+
+      case 'citizenFrogsSecondDataSet'
+         stimuliKeep = 481; % 1260 is full for data set 1, 481 for dataset 2
+         srtFrg = 1:9;
+         spLoc = 1:9;
+         legLoc = 9;
+         figSize = [0.15 0.2 0.575 0.6];
+         slideLeft = 0.075;
+   end
 
    if d.nFrogs == 1
       modelName = 'twoHighThreshold_1';
@@ -115,16 +131,16 @@ for dataIdx = 1:numel(dataList)
   accuracy = (d.personCorrect+1)./(d.personTotal+2);
   vote = nansum(d.y, 3)./sum(~isnan(d.y), 3);
 
-  tau = tau(1:trialsKeep, :);
-  d.truth = d.truth(:, 1:trialsKeep);
-  vote = vote(:, 1:trialsKeep);
+  tau = tau(1:stimuliKeep, :);
+  d.truth = d.truth(:, 1:stimuliKeep);
+  vote = vote(:, 1:stimuliKeep);
 
   for figureIdx = 1:numel(figureList)
 
     switch figureList{figureIdx}
       case 'ROCs'
 
-        drawROCs(d, chains, tau, vote, pantone);
+        drawROCs_2(d, chains, tau, vote, spLoc, legLoc, figSize, slideLeft, pantone);
 
         % detection, guess x accuracy
       case 'parameters'
@@ -133,7 +149,7 @@ for dataIdx = 1:numel(dataList)
 
       case 'environmentDynamics'
 
-        drawEnvironmentDynamics(d, tau, pantone);
+        drawEnvironmentDynamics(d, tau, srtFrg, pantone);
 
       end
 
