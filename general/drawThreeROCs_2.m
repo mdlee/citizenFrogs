@@ -4,7 +4,7 @@ function  drawROCs_2(d, tauEnvironment, tauCognitive, vote, spLoc, legLoc, figSi
 fontSize = 16;
 tickWidth = 0.2;
 curveTick = 0.001;
-lineWidth = 4;
+lineWidth = 3;
 environmentColor = pantone.ClassicBlue;
 modelColor = pantone.Greenery;
 majorityColor = pantone.Fiesta;
