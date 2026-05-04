@@ -1,0 +1,16 @@
+# citizen frogs
+# behavior
+model{
+  theta ~ dunif(0.5, 1)
+  for (t in 1:nTrials){
+    thetaHat[t, 1] = 1 - theta
+    thetaHat[t, 2] = theta
+    y[t] ~ dbern(thetaHat[t, tau[stimulus[t], frog[t]]+1])
+  }
+  for (j in 1:nFrogs){
+    phi[j] ~ dunif(0, 1)
+    for (i in 1:nStimuli){
+      tau[i, j] ~ dbern(phi[j])
+    }
+  }
+}

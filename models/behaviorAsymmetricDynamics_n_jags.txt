@@ -1,0 +1,19 @@
+# citizen frogs
+# behavior and asymmetric dynamics
+model{
+  theta ~ dunif(0.5, 1)
+  for (t in 1:nTrials){
+    thetaHat[t, 1] = 1 - theta
+    thetaHat[t, 2] = theta
+    y[t] ~ dbern(thetaHat[t, tau[stimulus[t], frog[t]]+1])
+  }
+  for (j in 1:nFrogs){
+    gammaArrive[j] ~ dunif(0, 1)
+    gammaLeave[j] ~ dunif(0, 1)
+    phi[j] = gammaArrive[j]/(gammaArrive[j]+gammaLeave[j])
+    tau[1, j] ~ dbern(0.5)
+    for (i in 2:nStimuli){
+      tau[i, j] ~ dbern(equals(tau[i-1, j], 1)*(1-gammaLeave[j]) + equals(tau[i-1, j], 0)*gammaArrive[j])
+    }
+  }
+}

@@ -1,11 +1,13 @@
 % runModels
 
-oneHighThresholdNoDifferences
-oneHighThresholdNoDifferencesAsymmetricDynamics
-oneHighThresholdNoDifferencesAsymmetricDynamicsCovariance
+behaviorAsymmetricDynamics_2
 
-twoHighThresholdNoDifferences
-twoHighThresholdNoDifferencesAsymmetricDynamics
-
-signalDetectionNoDifferences
-signalDetectionNoDifferencesAsymmetricDynamics
+% oneHighThresholdNoDifferences
+% oneHighThresholdNoDifferencesAsymmetricDynamics
+% oneHighThresholdNoDifferencesAsymmetricDynamicsCovariance
+% 
+% twoHighThresholdNoDifferences
+% twoHighThresholdNoDifferencesAsymmetricDynamics
+% 
+% signalDetectionNoDifferences
+% signalDetectionNoDifferencesAsymmetricDynamics
