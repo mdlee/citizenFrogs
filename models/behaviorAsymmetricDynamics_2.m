@@ -5,7 +5,7 @@
 
 clear; close all;
 
-preLoad = false;
+preLoad = true;
 printFigures = true;
 
 dataDir = ('../data/');

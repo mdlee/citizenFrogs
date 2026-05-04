@@ -4,12 +4,12 @@ function  drawFourROCs(d, tauBoth, tauEnvironment, tauCognitive, vote, spLoc, le
 fontSize = 16;
 tickWidth = 0.2;
 curveTick = 0.001;
-lineWidth = 4;
+lineWidth = 3;
 bothColor = pantone.ClassicBlue;
 environmentColor = pantone.Sandstone;
 modelColor = pantone.Greenery;
 majorityColor = pantone.Fiesta;
-labs = {'both', 'environment', 'cognitive', 'behavior'};
+labs = {'cog + env', 'environment', 'cognitive', 'behavior'};
 
 
 [nRows, nCols] = subplotArrange(d.nFrogs);

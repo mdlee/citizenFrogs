@@ -8,7 +8,7 @@ lineWidth = 4;
 environmentColor = pantone.ClassicBlue;
 modelColor = pantone.Greenery;
 majorityColor = pantone.Fiesta;
-labs = {'environment', 'cognitive', 'behavior'};
+labs = {'cog + env', 'cognitive', 'behavior'};
 
 
 [nRows, nCols] = subplotArrange(d.nFrogs);
